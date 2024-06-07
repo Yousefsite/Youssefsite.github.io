@@ -1,0 +1,136 @@
+.menu-container {
+  text-align: center;
+}
+
+menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+menu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+menu li:last-child {
+  margin-right: 0;
+}
+
+menu li a {
+  text-decoration: none;
+  color: #333;
+}
+
+
+.plan {
+  list-style-type: none;
+}
+
+.plan li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+body{
+  background-image: url(../Images/background.jpg);
+  background-size: cover;
+}
+p{
+  padding: 50px;
+}
+
+.menu-container {
+  background-color: white;
+}
+
+title {
+  color: white;
+}
+/* CSS ADAPTATIF PAR TAILLE D'ÉCRAN / RESPONSIVE CSS */
+/* Grand bureau */
+@media (min-width: 1200px) { 
+  body    {
+  }
+}
+
+/* Tablette portrait vers paysage et bureau */
+@media (min-width: 768px) and (max-width: 1199px) { 
+  body    {
+      background-color: purple;
+  }
+}
+
+/* Téléphone paysage vers tablette portrait */
+@media (max-width: 767px) { 
+  body    {
+      background-color: blue;
+  }
+}
+
+/* Téléphones paysage et vers le bas */
+@media (max-width: 480px) { 
+  body    {
+      background-color: red;
+  }
+  li {
+    float: none;
+  }
+}
+/* CSS ADAPTATIF PAR TAILLE D'ÉCRAN / RESPONSIVE CSS */
+/* Grand bureau */
+@media (min-width: 1200px) { 
+  body    {
+  }
+}
+
+/* Tablette portrait vers paysage et bureau */
+@media (min-width: 768px) and (max-width: 1199px) { 
+  body    {
+      background-color: purple;
+  }
+}
+
+/* Téléphone paysage vers tablette portrait */
+@media (max-width: 767px) { 
+  body    {
+      background-color: blue;
+  }
+}
+
+/* Téléphones paysage et vers le bas */
+@media (max-width: 480px) { 
+  body    {
+      background-color: red;
+  }
+  li {
+    float: none;
+  }
+}
+h1{
+  margin-right: 20px;
+   vertical-align: middle;
+   width:"90";
+    height:"50";
+}
+footer{
+ background-color: white;
+}
+h6{
+  font-size: 25px;
+}
+p{
+  font-size: 35px;
+}
+body{
+ text-align: center;
+}
+img{
+margin-right: 20px; 
+vertical-align: middle;
+width:"90";
+height:"50";
+}
+h6{
+ font-size: 25px;
+}

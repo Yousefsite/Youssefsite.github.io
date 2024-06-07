@@ -1,0 +1,1737 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-CA" xml:lang="fr-CA">
+<head id="ctl00__headerOfMasterPage"><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WM22B2W');</script><title>
+	Recherche Morningstar sur les Actions, Fonds communs, FNB et Placements
+</title><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"c97f499f7a","applicationID":"1343170514","transactionName":"MgNRYhQEDEsFAhYLXwtJcmU2SgFZSwUHBFEQCkcYBxYSQA==","queueTime":0,"applicationTime":9,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"1386019404",accountID:"1526825",trustKey:"35894",xpid:"VQMFV15RDRABV1VRBgYHU1UF",licenseKey:"c97f499f7a",applicationID:"1343170514"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(31),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(32),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError";if(!c.disabled){var l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(14),t(13),"addEventListener"in window&&t(7),c.xhrWrappable&&t(15),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){U++,L=g.hash,this[u]=y.now()}function o(){U--,g.hash!==L&&i(0,!0);var t=y.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+g,e])}function a(t,e){t.on(e,function(){this[e]=y.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,g=w.location,y=t("loader");if(w[v]&&y.xhrWrappable&&!y.disabled){var x=t(11),b=t(12),E=t(9),R=t(7),O=t(14),T=t(8),S=t(15),P=t(10),M=t("ee"),C=M.get("tracer"),N=t(23);t(17),y.features.spa=!0;var L,U=0;M.on(u,r),b.on(p,r),P.on(p,r),M.on(d,o),b.on(l,o),P.on(l,o),M.buffer([u,d,"xhr-resolved"]),R.buffer([u]),O.buffer(["setTimeout"+c,"clearTimeout"+s,u]),S.buffer([u,"new-xhr","send-xhr"+s]),T.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),x.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),C.buffer([u,"no-"+u]),P.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,m+s),a(T,m+"-done"),a(P,"new-jsonp"),a(P,"jsonp-end"),a(P,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,N(!0)),w[v]("load",i,N(!0)),w[v]("popstate",function(){i(0,U>1)},N(!0))}},{}],5:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function o(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+p])try{window.performance[h](m,o,!1)}catch(t){}else try{window.performance[h]("webkit"+m,o,!1)}catch(t){}}function i(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(14),f=t(13),u=t(6),d=t(23),p="learResourceTimings",l="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",O=t("loader");if(!O.disabled){O.features.stn=!0,t(9),"addEventListener"in window&&t(7);var T=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof T&&(this.bstStart=O.now())}),a.on(b,function(t,e){var n=t[0];n instanceof T&&s("bst",[n,e,this.bstStart,O.now()])}),c.on(x,function(t,e,n){this.bstStart=O.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,O.now(),this.bstType])}),f.on(x,function(){this.bstStart=O.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,O.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=O.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):l in window.performance&&(window.performance["c"+p]?window.performance[l](m,o,d(!1)):window.performance[l]("webkit"+m,o,d(!1))),document[l]("scroll",i,d(!1)),document[l]("keypress",i,d(!1)),document[l]("click",i,d(!1))}}},{}],6:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],7:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],8:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return o.emit(n+"start",[t,a],s),s.then(function(t){return o.emit(n+"end",[null,t],s),t},function(t){throw o.emit(n+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(32),a=t(31);e.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,p=s.Response,l=s.fetch,h="prototype",m="nr@context";d&&p&&l&&(a(u,function(t,e){r(d[h],e,f),r(p[h],e,f)}),r(s,"fetch",c),o.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(c+"done",[null,e],n)}else o.emit(c+"done",[t],n)}))},{}],9:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],10:[function(t,e,n){function r(t){function e(){f.emit("jsonp-end",[],l),t.removeEventListener("load",e,c(!1)),t.removeEventListener("error",n,c(!1))}function n(){f.emit("jsonp-error",[],l),f.emit("jsonp-end",[],l),t.removeEventListener("load",e,c(!1)),t.removeEventListener("error",n,c(!1))}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var d=s(a),p="function"==typeof d.parent[d.key];if(p){var l={};u.inPlace(d.parent,[d.key],"cb-",l),t.addEventListener("load",e,c(!1)),t.addEventListener("error",n,c(!1)),f.emit("new-jsonp",[t.src],l)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(d);return e?e[1]:null}function a(t,e){var n=t.match(l),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(p);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t(23),f=t("ee").get("jsonp"),u=t("wrap-function")(f);if(e.exports=f,o()){var d=/[?&](?:callback|cb)=([^&#]+)/,p=/(.*)\.([^.]+)/,l=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?u.inPlace(Node.prototype,h,"dom-"):(u.inPlace(HTMLElement.prototype,h,"dom-"),u.inPlace(HTMLHeadElement.prototype,h,"dom-"),u.inPlace(HTMLBodyElement.prototype,h,"dom-")),f.on("dom-start",function(t){r(t[0])})}},{}],11:[function(t,e,n){var r=t("ee").get("mutation"),o=t("wrap-function")(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],12:[function(t,e,n){function r(t){var e=i.context(),n=s(t,"executor-",e,null,!1),r=new f(n);return i.context(r).getCtx=function(){return e},r}var o=t("wrap-function"),i=t("ee").get("promise"),a=t("ee").getOrSetContext,s=o(i),c=t(31),f=NREUM.o.PR;e.exports=i,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){i.emit("propagate",[null,!o],a,!1,!1),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var a=e.apply(f,arguments),s=f.resolve(a);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&i.emit("propagate",[t,!0],n,!1,!1),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),o.wrapInPlace(f.prototype,"then",function(t){return function(){var e=this,n=o.argsToArray.apply(this,arguments),r=a(e);r.promise=e,n[0]=s(n[0],"cb-",r,null,!1),n[1]=s(n[1],"cb-",r,null,!1);var c=t.apply(this,n);return r.nextPromise=c,i.emit("propagate",[e,!0],c,!1,!1),c}}),i.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this,null,!1),t[1]=s(t[1],"resolve-",this,null,!1)}),i.on("executor-err",function(t,e,n){t[1](n)}),i.on("cb-end",function(t,e,n){i.emit("propagate",[n,!0],this.nextPromise,!1,!1)}),i.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=i.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],13:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],14:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],15:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,O.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(7);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),p=t(23),l=NREUM.o,h=l.XHR,m=l.MO,v=l.PR,w=l.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,o,p(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,O=document.createTextNode(R);new m(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],16:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=l.generateSpanId(),m=l.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&p())&&(w.traceContextParentHeader=o(h,m),w.traceContextStateHeader=i(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function o(t,e){return"00-"+e+"-"+t+"-01"}function i(t,e,n,r,o){var i=0,a="",s=1,c="",f="";return o+"@nr="+i+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var o=h(n.allowed_origins[r]);if(t.hostname===o.hostname&&t.protocol===o.protocol&&t.port===o.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function p(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var l=t(28),h=t(18);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],17:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(d[r],this.listener,!1);return e.protocol&&"data"===e.protocol?void g("Ajax/DataUrl/Excluded"):void(e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this)))}}function o(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function i(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(18),f=t(16).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],p=d.length,l=t("id"),h=t(24),m=t(22),v=t(19),w=t(23),g=t(25).recordSupportability,y=NREUM.o.REQ,x=window.XMLHttpRequest;a.features.xhr=!0,t(15),t(8),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){i(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<p;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof x&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var o=f(this.parsedOrigin);if(o&&(o.newrelicHeader||o.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var i={};for(var a in r)i[a]=r[a];i.headers=new Headers(r.headers||{}),e(i.headers,o)&&(this.dt=o),t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&e(t[0].headers,o)&&(this.dt=o)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},i=this.target;if("string"==typeof i?n=i:"object"==typeof i&&i instanceof y?n=i.url:window.URL&&"object"==typeof i&&i instanceof URL&&(n=i.href),o(this,n),"data"!==this.params.protocol){var s=(""+(i&&i instanceof y&&i.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}}),u.on("fetch-done",function(t,e){if(this.endTime=a.now(),this.params||(this.params={}),"data"===this.params.protocol)return void g("Ajax/DataUrl/Excluded");this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],18:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];if(0===(t||"").indexOf("data:"))return{protocol:"data"};var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],19:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(22);e.exports=r},{}],20:[function(t,e,n){function r(){}function o(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),i(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var i=t("handle"),a=t(31),s=t(32),c=t("ee").get("tracer"),f=t("loader"),u=t(25),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",h=l+"ixn-";a(p,function(t,e){d[e]=o(l,e,!0,"api")}),d.addPageAction=o(l,"addPageAction",!0),d.setCurrentRouteName=o(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=o(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),i("err",[t,f.now(),!1,e])}},{}],21:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],22:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],23:[function(t,e,n){var r=!1;try{var o=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,o),window.removeEventListener("testPassive",null,o)}catch(i){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],24:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],25:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return i("storeMetric",n,null,"api"),n}function o(t,e){var n=[s,t,{name:t},e];return i("storeEventMetrics",n,null,"api"),n}var i=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:o}},{}],26:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(i=Math.max((new Date).getTime(),i))-a}function o(){return i}var i=(new Date).getTime(),a=i,s=t(33);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=o},{}],27:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;var o=[r],i=a({});i&&o.push(i),l("lcp",o)}}function i(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function s(t){if(t instanceof w&&!y){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=h.now()?n.fid=h.now()-e:e>h.offset&&e<=Date.now()?(e-=h.offset,n.fid=h.now()-e):e=h.now(),y=!0,l("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=h.now(),l("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,d,p,l=t("handle"),h=t("loader"),m=t(30),v=t(23),w=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(g){}d=new PerformanceObserver(o);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(g){}p=new PerformanceObserver(i);try{p.observe({type:"layout-shift",buffered:!0})}catch(g){}}if("addEventListener"in document){var y=!1,x=["click","keydown","mousedown","pointerdown","touchstart"];x.forEach(function(t){document.addEventListener(t,s,v(!1))})}m(c)}},{}],28:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){return a(16)}function i(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,o=window.crypto||window.msCrypto;o&&o.getRandomValues&&Uint8Array&&(n=o.getRandomValues(new Uint8Array(t)));for(var i=[],a=0;a<t;a++)i.push(e().toString(16));return i.join("")}e.exports={generateUuid:r,generateSpanId:o,generateTraceId:i}},{}],29:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],30:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[i]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,o(!1))}var o=t(23);e.exports=r;var i,a,s;"undefined"!=typeof document.hidden?(i="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],31:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],32:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],33:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,o,i,a){if(a!==!1&&(a=!0),!l.aborted||i){t&&a&&t(n,r,o);for(var s=e(o),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var p=d[y[n]];return p&&p.push([x,n,r,s]),s}}function i(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return p[t]=p[t]||o(n)}function w(t,e){l.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:i,addEventListener:i,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function i(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",f=t("gos"),u=t(31),d={},p={},l=e.exports=o();e.exports.getOrSetContext=i,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=O.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+O.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function o(){"complete"===m.readyState&&i()}function i(){s("mark",["domContent",a()+O.offset],null,"api")}var a=t(26),s=t("handle"),c=t(31),f=t("ee"),u=t(29),d=t(21),p=t(23),l=d.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!1;NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1216.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),O=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(20),t(27),m[v]?(m[v]("DOMContentLoaded",i,p(!1)),h[v]("load",r,p(!1))):(m[w]("onreadystatechange",o),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var i,a,u,p;try{a=this,i=d(arguments),u="function"==typeof r?r(i,a):r||{}}catch(l){o([l,"",[i,a,c],u],t)}s(n+"start",[i,a,c],u,f);try{return p=e.apply(a,i)}catch(h){throw s(n+"err",[i,a,h],u,f),h}finally{s(n+"end",[i,a,p],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,i(e,nrWrapper,t),nrWrapper)}function r(t,e,r,o,i){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,o,c,i))}function s(n,r,i,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,i,e,a)}catch(c){o([c,n,r,i],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=p,n}function o(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function i(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(i){o([i],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function s(t,e){var n=e(t);return n[p]=t,i(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(32),p="nr@original",l=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,17,5,3,4]);</script><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="referrer" content="no-referrer-when-downgrade" />
+        <link rel="Stylesheet" type="text/css" href="//euim.mstar.com/CSS/cookieConsent.min.css?v=3" />
+        <link rel="shortcut icon" type="image/x-icon" href="//euim.mstar.com/images/favicon.ico" />
+        <link rel="preload" href="//mwc-cdn.morningstar.com/mc/morningstar-design-system/2.0.0/fonts/600bda4e-11fe-4903-9a39-bb6b77389170.woff" as="font" type="font/woff" crossorigin />
+        <link rel="preload" href="//mwc-cdn.morningstar.com/mc/morningstar-design-system/2.0.0/fonts/3b5a7b6a-e026-4ee8-b80f-6aa5e44b2977.woff" as="font" type="font/woff" crossorigin />
+        <link rel="preload" href="//mwc-cdn.morningstar.com/mc/morningstar-design-system/2.0.0/fonts/a55d5255-e095-4e87-ac0d-fe0968b0a9c6.woff" as="font" type="font/woff" crossorigin />
+        <link rel="Stylesheet" type="text/css" href="//mwc-cdn.morningstar.com/mc/morningstar-design-system/2.0.0/dist/mds.css" />
+        <link rel="stylesheet" type="text/css" href="//euim.mstar.com/css/autocomplete.css" />
+        
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+
+        <script type="text/javascript" src="//euim.mstar.com/scripts/ads.js"></script>
+        <script type="text/javascript" src="//euim.mstar.com/scripts/jquery.autocomplete-1.4.2.js"></script>
+        <script type="text/javascript" src="//euim.mstar.com/scripts/jquery.json-2.2.min.js"></script>
+        <script type="text/javascript" src="//euim.mstar.com/scripts/jquery.cookie.js"></script>
+        
+            <script src="https://cdn.usefathom.com/script.js" data-site="UCOUWVJG" data-canonical="false" data-spa="auto" defer></script>
+              
+    
+    <script type="text/javascript">
+		$(window).load(function () {
+	           var toprightAd = $('#ctl00__columns__col3').find('.advert.firstAd');
+       
+                function check() {
+                    if ($(document).width() < 945 ) {
+                        $('#cmsgoLineupArticlesMiddleAbove_lineup').prepend(toprightAd);
+                    }
+                    else {
+                        if ($('#ctl00__columns__col3').find('.advert.firstAd').length === 0 ) {
+                            toprightAd.insertBefore($('#_usMarketIndicies').parent('div'));
+                        }
+                    }
+                }
+
+                if (toprightAd && toprightAd.length > 0) {
+                    check(); // first-time check
+
+                    $(window).resize(function () {
+                        check();
+                    });
+                }
+
+		});
+ </script>
+<meta name="description" content="Recherche Morningstar effectue des analyses sur les marchés, les fonds communs, les actions et les FNB en se fondant sur des données des nouvelles financières." /><meta name="keywords" content="Recherche financière, Placements, Analyse, Marchés, Fonds communs, Actions, FNB, Données, Nouvelles, Manchettes, Contenu éditorial, Investisseurs, Conseillers, Gestionnaires d&#39;actifs, Succès de l&#39;investisseurs, Morningstar" /><script type="text/javascript" src="//euim.mstar.com/scripts/homefunctions.js"></script><script type="text/javascript" src="//euim.mstar.com/ca/fr-CA/scripts/usabilla.js"></script><script type="text/javascript">AddStyleFileForBrowser('/ca/skin/fr-ca/css/pmaster_IE.css','/ca/skin/fr-ca/css/pmaster.css');</script><script type="text/javascript">var aim = {
+    "country": "ca",
+    "site": "ms.ca",
+    "area": "homepage",
+    "poslist": "topright,right,overlay,bottom195x90,bottom728x90",
+    "adserver": "msmedia.morningstar.com/mstar/jserver",
+    "adquery": "/pgid=homepage"
+};</script><script type="text/javascript">var _timeSpanFullAMAData = 604800; var _timeSpanMissingData=86400; var _ttlExpires = 31536000;var _onConsent='False'; var _registerType=0</script><script type="text/javascript" src="//euim.mstar.com//Modules/AiMatch/core.js?v=3.1"></script><link href="//euim.mstar.com/css/print.css" type="text/css" rel="stylesheet" media="print" /><link href="/ca/skin/fr-ca/css/images.css" type="text/css" rel="stylesheet" /><link href="//euim.mstar.com/css/m-global_v_EU.css" type="text/css" rel="stylesheet" /><link href="/ca/skin/fr-ca/css/main5.css" type="text/css" rel="stylesheet" /><link href="//euim.mstar.com/css/newRegistrationProcess.css" type="text/css" rel="stylesheet" /><link rel="canonical" href="https://www.morningstar.ca/ca" /><link href="/ca/feeds/rss.aspx?lang=fr-CA" title="Recherche Morningstar" type="application/rss+xml" rel="alternate" /></head>
+<body onload="if (typeof(initMain) == 'function') { initMain(); }">
+    <noscript><iframe src='https://www.googletagmanager.com/ns.html?id=GTM-WM22B2W' height='0' width='0' style='display:none;visibility:hidden'></iframe></noscript>
+    <script type="text/javascript">
+       
+    </script>
+    
+    <script type="text/javascript">
+        
+    </script>
+    
+    
+
+<style type="text/css">
+    .first {
+        border-left: 0 !important;
+    }
+
+    #_literalHtml div {
+        display: inline-block
+    }
+
+    #Navbar table {
+        table-layout: auto;
+    }
+
+    #Navbar td {
+        float: none;
+        border-left: medium none;
+        position: static;
+    }
+
+    #Navbar td:first-child {
+        border-left: 1px solid #999999;
+    }
+
+    #Navbar td.Tab:hover, #Navbar td.Tabw:hover {
+        background-color: #E7EFFF;
+    }
+
+    .mdc-top-ad__placeholder{
+        padding-bottom: 0px !important;
+    }
+</style>
+
+<link rel="Stylesheet" type="text/css" href="//euim.mstar.com/CSS/responsive.css?v=2" />
+<link rel="Stylesheet" type="text/css" href="//euim.mstar.com/CSS/pmaster5.css" />
+
+
+
+
+<style>
+    div {
+        font-family: UniversNextMorningStarW04, Univers, HelveticaNeue, "Helvetica Neue", Helvetica, PingFangTC, "Microsoft JhengHei", Arial, sans-serif !important;
+        font-style: normal !important;
+        font-size: 15px !important;
+        font-weight: 300 !important;
+    }
+</style>
+
+<link rel="Stylesheet" type="text/css" href="//euim.mstar.com/CSS/NavMenu-button.css" />
+<link rel="Stylesheet" type="text/css" href="//euim.mstar.com/CSS/NLdropdown.css" />
+
+
+<link rel="Stylesheet" type="text/css" href="//euim.mstar.com/CSS/headerNewDesing.css?v=3" />
+
+<link rel="stylesheet" type="text/css" href="//euim.mstar.com/Modules/MorningstarResearch/core.css">
+
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="//euim.mstar.com/scripts/logOut.js"></script>
+
+
+<!--[if IE 7]>
+	<style type="text/css">
+   #expandedMenu{float:none; position:relative;right:2%; width:953px;background:url(/includes/images/repeater.gif) repeat-y 0 0;padding:8px 20px 30px 20px;border-top:1px solid #a7aaaf;}
+	</style>
+<![endif]-->
+
+<script type="text/javascript" src="//euim.mstar.com/Modules/EUModalDialog/eumodaldialog.min.js?v=2.0"></script>
+<script type="text/javascript" src="//euim.mstar.com/Modules/CrossDomain/crossdomain.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="//euim.mstar.com/Modules/EUModalDialog/css/jquery.modaldialog.css" />
+
+<script type="text/javascript" src="//euim.mstar.com/Scripts/responsive.js?v=2"></script>
+
+
+
+<script type="text/javascript">
+    function RNSReportLog() {
+        var Rnsurl = document.location.href;
+        var mBaseUrl = 'https://www.morningstar.ca';
+        var MemberId = '-1';
+        mBaseUrl = mBaseUrl + "/uk/util/Sitelog.aspx?id=" + MemberId + "&url=" + encodeURIComponent(Rnsurl);
+        $.getScript(mBaseUrl);
+    }
+
+    function HTTPReqObject() {
+        if (window.XMLHttpRequest) return new XMLHttpRequest();
+        else if (window.ActiveXObject)                  //IE 6 or earlier
+        {
+            try { return (new ActiveXObject("Msxml.XMLHTTP")); }
+            catch (e) {
+                try { return (new ActiveXObject("Microsoft.XMLHTTP")); }
+                catch (e) { return null; }
+            }
+        }
+        else { return null; }
+    }
+
+    function monitorRegistrationPopupContent() {
+        try {
+            var iframeSrc = $("#frameContainer").get(0).contentWindow.document.URL;
+            var iframeUrl = iframeSrc.split("?");
+            if (iframeUrl[0].match("WelcomePopup.aspx$")) {
+                window.location.reload(true);
+            }
+        } catch (err) { }
+    }
+
+    function MobileCheck() {
+        let check = false;
+        (function (a) { if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true; })(navigator.userAgent || navigator.vendor || window.opera);
+        return check;
+    };
+
+    $(document).on("click", function (event) {
+        var $trigger = $("#eurt_menu");
+        if ($trigger !== event.target && !$trigger.has(event.target).length) {
+            $("#eurt_menu_content").hide();
+        }
+    });
+
+    $(document).ready(function () {
+        if ($('#CookieBar').css('display') == 'block' && ($('#ad_top_page').css('display') == 'none' || $('#ad_top_page').length == 0)) {
+            $('#Header1').css('margin-top', 52);
+        }
+        else if ($('#ad_top_page').css('display') == 'block') {
+            var topAdHeight = document.getElementById('TopAd').offsetHeight + 16;
+            $('#ad_top_page').css('height', topAdHeight + 'px');
+
+            if ($('#CookieBar').css('display') == 'block') {
+                $('#TopAd').css('margin-top', 60);
+                $('.mdc-top-ad__placeholder').css('margin-top', 60);
+            }
+        }
+
+        $('#btnAcceptCookie').click(function () {
+            $('#TopAd').css('margin-top', 0);
+            $('.mdc-top-ad__placeholder').css('margin-top', 0);
+            if ($('#ad_top_page').css('display') == 'block') {
+                $('#Header1').css('margin-top', 9);
+            } else {
+                $('#Header1').css('margin-top', 0)
+            }
+        })
+
+        $('#eurt_menu').click(function () {
+            $('#eurt_menu_content').show();
+        })
+
+
+        $("#LoginPanel ul li:first").each(function () {
+            $(this).addClass("first");
+        });
+
+        // Kill Panel
+        $("#killPanel").click(function () {
+            CreateIntrocookie('720');
+        });
+
+        var currentSite = 'ca';
+        if (currentSite == 'it') {
+            $('#registerBoxInnerDiv').css('height', 520);
+            $('#registerBoxMidBg').css('height', 520);
+        }
+
+        // Expand Panel
+        $("#open").click(function () {
+            $("div#panel").slideDown("slow");
+            $("#close").css('display', 'block');
+            $("#open").css('display', 'none');
+            $("div#expandedMenu").css('padding-bottom', '15px');
+            try {
+                _gaq.push(['_trackEvent', 'IntroPushdown', 'OpenClick', 'IntroPushDownClick']);
+                ga('gtmIntl.send', 'click', 'IntroPushdown', 'OpenClick', 'IntroPushDownClick');
+            } catch { }
+        });
+        // Collapse Panel
+        $("#close").click(function () {
+            $("div#panel").slideUp("slow");
+            $("#open").css('display', 'block');
+            $("#close").css('display', 'none');
+            $("div#expandedMenu").css('padding-bottom', '10px');
+        });
+
+        $('#quoteSearch').click(function () {
+            $('#GoSearch').prop('disabled', false);
+        });
+
+	
+    });
+</script>
+
+<div id="LayerHeader" class="TopRelPos">
+    
+    <div id="ad_top_page">
+        <div class="mdc-top-ad__placeholder"></div>
+        <div class="mdc-bar mdc-top-ad">
+            <div class="mdc-top-ad__visibile">
+                <div class="mdc-top-ad__wrapper">
+                    <div class="mdc-top-ad__drawer">
+                        <div id="TopAd" class="mdc-ad ad mdc-ad--complete">
+                            <script type="text/javascript">
+                                ShowAdForSyncTopPage(MobileCheck() ? "NewTopAdsPageMobile" : "NewTopAdsPageDesktop");
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var adFrame1 = document.getElementById("TopAd");
+        var adFrame1txt = adFrame1.innerHTML;
+        if ((adFrame1txt.indexOf("aimatch.com/default.gif") >= 0) || (adFrame1txt.indexOf("aimatch.com/empty.gif") >= 0) || (adFrame1txt.indexOf("morningstar.com/empty.gif") >= 0) || (adFrame1txt.trim().length < 150)) {
+            var element = document.getElementById('ad_top_page')
+            element.style.display = "none";
+        }
+        else {
+            var element = document.getElementById('ad_top_page')
+            element.style.display = "block";
+            //element.style.height = document.getElementById('TopAd').offsetHeight + 'px';
+        }
+    </script>
+    
+
+
+    <div id="Header1" class="clearfix mdc-masthead mds-masthead default-layout__masthead TopRelPos">
+        <div title="show hot topics" class="collapsed" style="display: none;"></div>
+        
+        <div class="menu-button">
+            <button id="btn-NavMenu" navmenu="true" type="button" onclick="toggleNavMenu();"></button>
+        </div>
+        
+        <div class="mds-masthead__inner">
+            <!-- Search menu -->
+            <div class="mds-masthead__left">
+                <label id="searchLabel" for="searchTerm" />
+                <div id="searchpanel_newDesing">
+	
+                <form name="quoteForm" method="GET" action="javascript:doSearch(&#39;quoteSearch&#39;, &#39;https://www.morningstar.ca/ca&#39;, &#39;&#39;, &#39;Rechercher les cotes et le site&#39;)" id="quoteForm">
+	<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjA2MTAyNjYxMGRkv87UevsZr81IUBuKAyVxwBuFnYD0XZC9h5HhE0f4QXs=" />
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8059ACE0" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAPDOS+Uv2gf3qRnuUYwIFaUlZUdqf9LcH2nOYbHGVq29jS+SOz9VhYYYiO25YjfJ9WRVAL1of/3hKOrDQZf7HJKQuDbxbMWsbJ61VAW648KTA==" />	<div class="mds-search-field" style="margin:auto" role="search"><input name="quoteSearch" type="text" value="Rechercher les cotes et le site" id="quoteSearch" title="Enter name, ISIN or ticker" class="mds-search-field__input" onclick="ClearSearchBox(&#39;quoteSearch&#39;,&#39;Rechercher les cotes et le site&#39;)" onchange="EnableSearchButton(&#39;Rechercher les cotes et le site&#39;)" aria-label="Search" placeholder="Rechercher les cotes et le site" /><svg id="GoSearch" class="mds-icon mds-search-field__search-icon" aria-hidden="true" onclick="javascript:doSearch(&#39;quoteSearch&#39;, &#39;https://www.morningstar.ca/ca&#39;, &#39;&#39;, &#39;Rechercher les cotes et le site&#39;)"><use xlink:href="#search--s"></use><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1500" id="search--s"><path d="M1000.5 925.5c70-90 100-190 100-310 0-280-220-510-500-510s-500 220-500 510c0 280 230 490 500 490 120 0 230-40 320-110l410 400 70-70-400-400zm-390 90c-220 0-410-170-410-400s180-410 410-410 400 180 400 410-180 400-400 400z"></path></symbol></svg><span class="mds-search-field__input-focus-outline"></span></div><input name="searchTerm" type="text" id="searchTerm" style="display:none;" />
+	
+<script type="text/javascript">
+//<![CDATA[
+var baseUrl = 'https://www.morningstar.ca';var currentSiteUrl = 'https://www.morningstar.ca/ca';var currentLanguage = 'fr-CA';var currentSite = 'ca';var staticContentVersion = '';var cookieDomain = '.morningstar.ca';var hasLogin = false;var isPremiumUser = false;var disclaimerPath = currentSiteUrl + '/Disclaimer/Disclaimer.aspx?id=';var QT_PREFIX = currentSiteUrl + '/snapshot/snapshot.aspx?id=';var FUND_QT_PREFIX = currentSiteUrl + '/report/fund/performance.aspx?t=';var ETF_QT_PREFIX=currentSiteUrl + '/report/etf/performance.aspx?t=';var STOCK_QT_PREFIX = currentSiteUrl + '/report/stocks/performance.aspx?t=';var FUND_Screener_PREFIX = currentSiteUrl + '/screener/fund.aspx#?';var ETF_Screener_PREFIX=currentSiteUrl + '/screener/etf.aspx#?';var STOCK_Screener_PREFIX = currentSiteUrl + '/screener/stock.aspx#?';var PENSION_Screener_PREFIX = currentSiteUrl + '/screener/pension.aspx#?';var Article_Archive_PREFIX = currentSiteUrl + '/news/archive.aspx?';var ARTICLES = currentSiteUrl + '/news/';var euIMHost = '//euim.mstar.com';var gtmCode = 'GTM-WM22B2W';$(document).ready(function() {
+var managedHoldings = typeof(variable) === 'undefined' ? '' : currentHoldings;
+                                        var firstItem = 1;
+$('input#quoteSearch').autocomplete(autoCompleteGetUrl('nav', 'True'), {
+width:500,
+extraParams: {
+preferedList: managedHoldings
+},
+type: 'POST',
+                                                cacheLength:1,
+                                                matchSubset:false,
+scrollHeight:600,
+formatItem: function(i) {
+if( i[5] != undefined  ) {
+f = i[0];
+if( i[3] != undefined && i[3] != '' ) {
+    f += " - " + i[3] + " <span class='searchExchange'>" + i[4] + "</span>";
+}
+} else {
+                    if( i[2] == undefined || i[2] == '' ) {
+    f = "<div class='searchheader'>" + i[0] + "</div>";
+                    } else {
+    f = "<div>" + i[0] + "</div>";
+                    }
+}
+return f;
+},
+highlight: function(v, term) {
+return v;
+},
+dataType: 'text'
+}).result( function (event, item) {
+                                                if(typeof(item) === "undefined")
+                                                {
+                                                    $('input#quoteSearch').val( $('input#searchTerm').val() );
+eval("doSearchDefault('quoteSearch', 'https://www.morningstar.ca/ca','ARTICLE')");
+                                                }
+else if( item[1] != "") {
+eval("quoteSearchClick(" + item[1] + ")");
+} else {
+$('input#quoteSearch').val( $('input#searchTerm').val() );
+eval("doSearch('quoteSearch', 'https://www.morningstar.ca/ca','" + item[2] + "')");
+}
+} )
+});
+//]]>
+</script>
+</form>
+</div>
+            </div>
+            <!-- Logo -->
+
+
+            
+            <div id="LogoDesign" class="mds-masthead__logo-wrap">
+                <a href="https://www.morningstar.ca/ca">
+                    <img alt="Morningstar" src="https://www.morningstar.ca/static/UploadManager/Assets/e843315.svg" class="mds-masthead__logo--wide">
+                    <img alt="Morningstar" src="https://www.morningstar.ca/static/UploadManager/Assets/e843315.svg" class="mds-masthead__logo"></a>
+            </div>
+            
+
+            <div class="mds-masthead__right">
+                <!-- Login Panel -->
+                <div id="LoginPanel_newDesing">
+	
+                    
+                    <input type="hidden" id="hidCloseLabel" value="Fermer" />
+                    <script type="text/html" id="audienceTypeConfirmPopupContent">
+                        <iframe id="frameContainer" src="https://www.morningstar.ca/ca/membership/AudienceTypeConfirm.aspx" width="100%" frameborder="0" height="614px" scrolling="no"></iframe>
+                    </script>
+                    <script type="text/html" id="signUpPopupContent">
+                        <iframe id="frameContainer" src="https://www.morningstar.ca/ca/membership/RegistrationPopup.aspx" width="100%" frameborder="0" height="600px" scrolling="no"></iframe>
+                    </script>
+                    <script type="text/html" id="loginPopupContent">
+                        <iframe id="frameContainer" src="https://www.morningstar.ca/ca/membership/LoginPopup.aspx" width="100%" frameborder="0" height="260px" scrolling="no"></iframe>
+                    </script>
+
+                    <div class="mdc-user-popover">
+
+                        <a id="_companySite" class="mdc-link mdc-button mds-button mdc-user-popover__sign-up mds-button--flat rightButton" href="https://www.morningstar.com/fr-ca/company" target="_blank"><span class='mdc-link mdc-button mds-button mdc-user-popover__sign-up mds-button--flat rightButton'>Site de la société</span></a>
+
+                        <a id="_langToggle" class="mdc-link mdc-button mds-button mdc-user-popover__sign-up mds-button--flat rightButton" href="javascript:LangTrigger(&#39;en-CA&#39;)"><span>English</span></a>
+
+                        <a id="lnkSignup" class="mdc-link mdc-button mds-button mdc-user-popover__sign-up mds-button--flat rightButton" onclick="javascript:$.eumodaldialog.popup(&#39;&#39;, { contentID:&#39;signUpPopupContent&#39;, width: 566, height: 620, closeLabel: $(&#39;#hidCloseLabel&#39;).val(), hideCallback: monitorRegistrationPopupContent });" href="javascript:;">S'inscrire</a>
+                        <a id="lnkLogin" class="mdc-link mdc-button mds-button mdc-user-popover__sign-up mds-button--flat rightButton" onclick="location.href=&#39;https://www.morningstar.ca/ca/membership/Auth0CallbackManager.ashx&#39;" href="javascript:void(0);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" id="person">
+                                <path d="M9.6 12.1c.6.2 1.3.4 1.9.4 2.1 0 4.1-1.3 4.9-3.3 1-2.7-.3-5.7-3-6.8-2.7-1.1-5.7.3-6.8 3-1 2.6.3 5.7 3 6.7zM7.5 5.7C8.2 4 9.8 3 11.5 3c.5 0 1 .1 1.5.3 2.2.8 3.3 3.3 2.4 5.5-.9 2.2-3.3 3.3-5.5 2.4-2.1-.8-3.2-3.3-2.4-5.5zm11 8.3h-14C3.1 14 2 15.1 2 16.5V21h1v-4.5c0-.8.7-1.5 1.5-1.5h14c.8 0 1.5.7 1.5 1.5V21h1v-4.5c0-1.4-1.1-2.5-2.5-2.5z" />
+                                <use xlink:href="#person">
+                                </use>
+                            </svg>
+                            <span id="signInLabel">
+                                Se connecter
+                            </span>
+                        </a>
+                        <a id="HyperLink1" class="registrationLinks" rel="nofollow"></a>
+
+                        
+                        <a class="mdc-link mdc-button mds-button mdc-user-popover__sign-in--mobile mds-button--icon-only">
+                            <a id="lnkLoginImgUser" onclick="javascript:$.eumodaldialog.popup(&#39;&#39;, { contentID:&#39;loginPopupContent&#39;, width: 276, height: 278, closeLabel: $(&#39;#hidCloseLabel&#39;).val(), hideCallback: monitorRegistrationPopupContent, crossDomain: true});" href="javascript:;" style="padding-right: 10px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" id="person">
+                                    <path d="M9.6 12.1c.6.2 1.3.4 1.9.4 2.1 0 4.1-1.3 4.9-3.3 1-2.7-.3-5.7-3-6.8-2.7-1.1-5.7.3-6.8 3-1 2.6.3 5.7 3 6.7zM7.5 5.7C8.2 4 9.8 3 11.5 3c.5 0 1 .1 1.5.3 2.2.8 3.3 3.3 2.4 5.5-.9 2.2-3.3 3.3-5.5 2.4-2.1-.8-3.2-3.3-2.4-5.5zm11 8.3h-14C3.1 14 2 15.1 2 16.5V21h1v-4.5c0-.8.7-1.5 1.5-1.5h14c.8 0 1.5.7 1.5 1.5V21h1v-4.5c0-1.4-1.1-2.5-2.5-2.5z" />
+                                    <use xlink:href="#person">
+                                    </use>
+                                </svg>
+                            </a>
+                        </a>
+                        
+                    </div>
+                    <input name="TxtUrlToRedirect" type="hidden" id="TxtUrlToRedirect" />
+                
+</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="adcontainsm" class="clearfix TopRelPos">
+        <div id="adcontainnew" class="adwrapper">
+            <script type="text/javascript">                    
+                var ad_headerer_secId = '';
+                //[EURET-3979]
+
+                if (typeof master_SecID != 'undefined') {
+                    ad_headerer_secId = master_SecID;
+                }
+                else {
+                    ad_headerer_secId = '';
+                }
+
+                var ad_headerer_companyId = '';
+                if (typeof master_CompanyID != 'undefined') {
+                    ad_headerer_companyId = master_CompanyID;
+                }
+                else {
+                    ad_headerer_companyId = '';
+                }
+                function InitHeaderAd1ForSync(pgId) {
+                    return WebAdsWriteTagSponsorForSync('728', '90', 'HomepageTop', pgId, ad_headerer_secId, ad_headerer_companyId);
+                }
+                function InitHeaderAd1() {
+                    return WebAdsWriteTagSponsor('728', '90', 'HomepageTop', ad_headerer_secId, ad_headerer_companyId);
+                }
+                function InitHeaderAd1ForSyncNoPgid() {
+                    return WebAdsWriteTagForSyncNoPgid('728', '90', 'HomepageTop', ad_headerer_secId, ad_headerer_companyId);
+                }
+
+                //[EURET-3979]
+                function InitHeaderAd1ForSalreport() {
+                    return WebAdsWriteTagForSalReport('HomepageTop', _ticker, _excountry, _familyid, _fundcat, _brandingnameid);
+                }
+                function InitHeaderAd1ForSyncNoPgidForSalreport() {
+                    return WebAdsWriteTagSyncForSalReport('HomepageTop', _ticker, _excountry, _familyid, _fundcat, _brandingnameid);
+                }
+                function InitHeaderAd1ForSyncForPortfolio() {
+                    return WebAdsWriteTagSyncForSalReport('HomepageTop', null, null, null, null,null);
+                }
+            </script>
+            <div id="ad1">
+                <script type="text/javascript">   
+                    
+                    InitHeaderAd1();
+                    
+
+                </script>
+            </div>
+            <script type="text/javascript">
+                function InitHeaderAd2() {
+                    return WebAdsWriteTagSponsor('195', '90', 'topADSmallDefault', '', '');
+                }
+                function InitHeaderAd2ForSync(pgId) {
+                    return WebAdsWriteTagSponsorForSync('195', '90', 'topADSmallDefault', pgId, '', '');
+                }
+                function InitHeaderAd2ForSyncNoPgid() {
+                    return WebAdsWriteTagForSyncNoPgid('195', '90', 'topADSmallDefault', '', '');
+                }
+                //[EURET-3979]
+                function InitHeaderAd2ForSalreport() {
+                    return WebAdsWriteTagForSalReport('topADSmallDefault', _ticker, _excountry, _familyid, _fundcat, _brandingnameid);
+                }
+                function InitHeaderAd2ForSyncNoPgidForSalreport() {
+                    return WebAdsWriteTagSyncForSalReport('topADSmallDefault', _ticker, _excountry, _familyid, _fundcat, _brandingnameid);
+                }
+                function InitHeaderAd2ForSyncForPortfolio() {
+                    return WebAdsWriteTagSyncForSalReport('topADSmallDefault', null, null, null, null,null);
+                }
+            </script>
+            <div id="ad2">
+                <script type="text/javascript">
+                    
+                    InitHeaderAd2();
+                                                                                                                                                                                                                                                                                                                                                                    
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div id="Navbar" class="clearfix USstyle TopRelPos">
+	<nav class="mds-site-navigation" style="background-color:#fdfdfd"><ul class="mds-site-navigation__list"><li class="mds-site-navigation__list-item mds-site-navigation__list-item--active"><div class="mds-site-navigation__list-item-inner"><a class="mds-button mds-button--large mds-button--flat mds-site-navigation__button" href="https://www.morningstar.ca/ca/">Accueil</a></div></li><li class="mds-site-navigation__list-item"><div class="mds-site-navigation__list-item-inner"><a class="mds-button mds-button--large mds-button--flat mds-site-navigation__button" href="https://www.morningstar.ca/ca/portfoliomanager/portfolio.aspx">Portefeuilles</a></div></li><li class="mds-site-navigation__list-item"><div class="mds-site-navigation__list-item-inner"><a class="mds-button mds-button--large mds-button--flat mds-site-navigation__button" href="https://www.morningstar.ca/ca/funds/default.aspx">Fonds</a></div></li><li class="mds-site-navigation__list-item"><div class="mds-site-navigation__list-item-inner"><a class="mds-button mds-button--large mds-button--flat mds-site-navigation__button" href="https://www.morningstar.ca/ca/etfs/default.aspx">FNB</a></div></li><li class="mds-site-navigation__list-item"><div class="mds-site-navigation__list-item-inner"><a class="mds-button mds-button--large mds-button--flat mds-site-navigation__button" href="https://www.morningstar.ca/ca/equities/default.aspx">Actions</a></div></li><li class="mds-site-navigation__list-item"><div class="mds-site-navigation__list-item-inner"><a class="mds-button mds-button--large mds-button--flat mds-site-navigation__button" href="https://www.morningstar.ca/ca/markets/default.aspx">Marchés</a></div></li><li class="mds-site-navigation__list-item"><div class="mds-site-navigation__list-item-inner"><a class="mds-button mds-button--large mds-button--flat mds-site-navigation__button" href="https://www.morningstar.ca/ca/personalfinance/default.aspx">Finances Personnelles</a></div></li><li class="mds-site-navigation__list-item"><div class="mds-site-navigation__list-item-inner"><a class="mds-button mds-button--large mds-button--flat mds-site-navigation__button" href="https://www.morningstar.ca/ca/news/archive.aspx">Archives</a></div></li><li class="mds-site-navigation__list-item"><div class="mds-site-navigation__list-item-inner"><a class="mds-button mds-button--large mds-button--flat mds-site-navigation__button" href="https://www.morningstar.ca/ca/tools/default.aspx">Outils</a></div></li></ul></nav>
+</div>
+
+    
+
+    <script type='text/javascript' src='//euim.mstar.com/scripts/DynamicGAFunctions.js?v=0'></script><script type='text/javascript'>try {var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-184317-47']);function getFileName() {var url = document.location.href;url = url.substring(url.indexOf('/')+1, url.length);url = url.substring(url.indexOf('/')+1, url.length);url = url.substring(url.indexOf('/'), url.length);if(url=='/ca/'){url='/ca/default.aspx';}return(url.replace(new RegExp('/', 'g'),'_'));}_gaq.push(['_setDomainName', document.domain]);_gaq.push(['_setCustomVar',4,'AudienceType',DynamicGAFunctions.GetAudienceType()]);if(DynamicGAFunctions.TrackOBSR){DynamicGAFunctions.TrackOBSR('ca');}_gaq.push(['_trackPageview']);}catch(err){}  (function () {var gaScript = document.createElement('script'); gaScript.type = 'text/javascript'; gaScript.async = true;gaScript.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gaScript, s);})();</script><script type='text/javascript' src='//im.mstar.com/im/mbr/scripts/mstartracking/tracking_user_m_c.js'></script><script type='text/javascript'> try {ga('gtmIntl.set', 'AudienceType', DynamicGAFunctions.GetAudienceType());}catch(err){}</script>
+    
+
+    
+    
+    <div id="site-navigation-menu" class="TopRelPos" navmenu="true">
+        <nav id="responsiveNavigation" role="navigation" navmenu="true">
+            <div id="navMenuPopup" navmenu="true">
+	
+                <ul class="main-navigation" navmenu="true">
+                </ul>
+            <ul class="main-navigation" NavMenu="true"><li class="header" onclick="javascript:try{_gaq.push([&#39;_trackEvent&#39;,&#39;SignUp&#39;,&#39;LinkClick&#39;]); ga(&#39;gtmIntl.send&#39;,&#39;event&#39;,&#39;SignUp&#39;,&#39;LinkClick&#39;);} catch { } $.eumodaldialog.popup(&#39;&#39;, { contentID:&#39;signUpPopupContent&#39;, width: 566, height: 620, closeLabel: $(&#39;#hidCloseLabel&#39;).val(), hideCallback: monitorRegistrationPopupContent });" NavMenu="true"><a class="nav-menu1" href="javascript:;">S'inscrire</a></li><li class="header" NavMenu="true"><a class="nav-menu1" href="https://www.morningstar.ca/ca/">Accueil</a></li><li class="header" NavMenu="true"><a class="nav-menu1" href="https://www.morningstar.ca/ca/portfoliomanager/portfolio.aspx">Portefeuilles</a></li><li class="header" NavMenu="true"><li class="headerwithchild" NavMenu="true"><a class="nav-menu1" href="https://www.morningstar.ca/ca/funds/default.aspx">Fonds</a></li><ul NavMenu="true"><li NavMenu="true"><a class="nav-menu2" href="https://www.morningstar.ca/ca/topics/234041/research/funds.aspx?lang=fr-CA">Cote de médaillé <img style="float: left; width:20px; height:20px" alt="Shield Icon" src="https://www.morningstar.co.uk/static/UploadManager/Assets/shield_icon_80x80.png"  ></a></li></ul></li><li class="header" NavMenu="true"><a class="nav-menu1" href="https://www.morningstar.ca/ca/etfs/default.aspx">FNB</a></li><li class="header" NavMenu="true"><a class="nav-menu1" href="https://www.morningstar.ca/ca/equities/default.aspx">Actions</a></li><li class="header" NavMenu="true"><a class="nav-menu1" href="https://www.morningstar.ca/ca/markets/default.aspx">Marchés</a></li><li class="header" NavMenu="true"><a class="nav-menu1" href="https://www.morningstar.ca/ca/personalfinance/default.aspx">Finances Personnelles</a></li><li class="header" NavMenu="true"><a class="nav-menu1" href="https://www.morningstar.ca/ca/news/archive.aspx">Archives</a></li><li class="header" NavMenu="true"><a class="nav-menu1" href="https://www.morningstar.ca/ca/tools/default.aspx">Outils</a></li><li class="header" NavMenu="true"><a class="nav-menu1" href="javascript:LangTrigger(&#39;en-CA&#39;)">Engels</a></li></ul>
+</div>
+        </nav>
+    </div>
+    
+</div>
+
+
+
+
+    <div id="Wrapper" class="TopRelPos">
+        <noscript>
+            <h3>
+                <span id="ctl00_Label1">You currently DO NOT have javascript enabled, to view our site this must be enabled, <a href='/errors/noscript.aspx'>read more</a></span></h3>
+        </noscript>
+
+        <div id="LayerMainContent" class="clearfix TopRelPos">
+            <div id="ctl00_bodywrap" class="clearfix bodywrap2">
+                
+
+
+<link rel="Stylesheet" type="text/css" href="https://www.morningstar.ca/UK/skin/en-GB/css/sitemapOverlay.css" />
+
+<script type="text/javascript">
+//<![CDATA[
+	
+	function checkMessageClick() {
+		if (typeof (CheckClick) == 'function') { CheckClick(); }
+		else {
+			if (typeof (checkClick) == 'function') { checkClick(); }
+		}
+	}	
+//]]>
+</script>
+
+<div id="dialogWelcome" style="display:none;">
+                <div id="registerBox1">
+                    <div id="registerBox1TopBg">&nbsp;</div>
+                    <div id="registerBox1MidBg">
+                    	<div class="registerRow">
+                        	<h3>Welcome to Morningstar.co.uk!</h3>
+								<p>The page that you were trying to access has been merged into Morningstar.co.uk, hence you have automatically been redirected here.</p>
+                                
+								<div id="details" class="details" style="display:block">
+									<p>As you might be aware, we are in an on-going process of merging Hemscott.com and Morningstar.co.uk in order to provide Hemscott.com users with an improved experience. Consequently, an increasing number of Hemscott.com pages will automatically redirect and users will have access the same information and tools within Morningstar.co.uk</p>
+									<br/>
+									<h3>For more information:</h3>
+									<html>
+<head/> 
+<body> 
+<ul> 
+	<li>Find <a style="text-decoration: underline;color: #333" href="http://www.morningstar.co.uk/uk/hemscottsitemap.aspx">Hemscott.com content on Morningstar.co.uk</a>
+	</li> 
+	<li>Read our <a style="text-decoration: underline; color: #333" href="http://www.morningstar.co.uk/uk/429/articles/100193/2-Minute-Guide-to-Morningstarcouk.aspx">2-minute guide to Morningstar.co.uk</a>
+	</li> 
+	<li>See a comprehensive list of <a href= "http://www.morningstar.co.uk/uk/sitemap/Sitemap.aspx" style="text-decoration:underline; color:#333">Morningstar.co.uk features</a>
+	</li> 
+	<li>Read the answers to <a href= "http://www.morningstar.co.uk/uk/help/faq.aspx" style="text-decoration:underline; color:#333">frequently asked questions</a>
+	</li> 
+	<li>Contact our <a href= "http://www.morningstar.co.uk/uk/help/feedbackform.aspx" style="text-decoration:underline; color:#333">client support</a> team
+	</li> 
+</ul> 
+</body>	 
+</html>
+								</div>
+							<div class="checkBoxDiv" onclick="checkMessageClick();">
+                                    <label class="label_check" for="sample-check">
+   				 						<input name="sample-check" id="check01" class="label_check" value="1" type="checkbox" />
+									</label>
+									<label id="Label11" for="CheckBox1" class="customCheckBox">Don't show me this message again</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="registerBox1BottomBg">&nbsp;</div>
+                    <div><div id="closeWelcome" onclick="hideDialog();">Close</div></div>
+                </div>
+</div>
+<div id="dialog-mask-welcome" style="filter: alpha(opacity=50); display: none; opacity: 0.5;"></div>
+   
+
+
+                
+                
+                
+                <div id="ctl00_titleDiv" class="PageTitle" style="display:none;">
+                    <h1 id="ctl00__headline"></h1>
+                </div>
+
+                <form method="post" action="/ca/?lang=fr-CA" id="aspnetForm" class="reset">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATEFIELDCOUNT" id="__VIEWSTATEFIELDCOUNT" value="17" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMjk4ODczMjAPZBYCZg9kFghmD2QWAmYPFgIeBFRleHQF4gI8c2NyaXB0PihmdW5jdGlvbih3LGQscyxsLGkpe3dbbF09d1tsXXx8W107d1tsXS5wdXNoKHsnZ3RtLnN0YXJ0JzpuZXcgRGF0ZSgpLmdldFRpbWUoKSxldmVudDonZ3RtLmpzJ30pO3ZhciBmPWQuZ2V0RWxlbWVudHNCeVRhZ05hbWUocylbMF0saj1kLmNyZWF0ZUVsZW1lbnQocyksZGw9bCE9J2RhdGFMYXllcic/JyZsPScrbDonJztqLmFzeW5jPXRydWU7ai5zcmM9J2h0dHBzOi8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tL2d0bS5qcz9pZD0nK2krZGw7Zi5wYXJlbnROb2RlLmluc2VydEJlZm9yZShqLGYpO30pKHdpbmRvdyxkb2N1bWVudCwnc2NyaXB0JywnZGF0YUxheWVyJywnR1RNLVdNMjJCMlcnKTs8L3NjcmlwdD5kAgEPFgIfAAWgATxub3NjcmlwdD48aWZyYW1lIHNyYz0naHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20vbnMuaHRtbD9pZD1HVE0tV00yMkIyVycgaGVpZ2h0PScwJyB3aWR0aD0nMCcgc3R5bGU9J2Rpc3BsYXk6bm9uZTt2aXNpYmlsaXR5OmhpZGRlbic+PC9pZnJhbWU+PC9ub3NjcmlwdD5kAgIPDxYCHgdWaXNpYmxlaGRkAgUPZBYEAgMPZBYCAgEPFgIfAAWOwQE8bGluayByZWw9InByZWxvYWQiIGFzPSJpbWFnZSIgaHJlZj0iLy9ldWltLm1zdGFyLmNvbS9JbWFnZXMvY291bnRyeUltZy9GbGFnc19hbGxfc21hbGwucG5nIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+DQo8bGluayByZWw9InN0eWxlc2hlZXQiIHR5cGU9InRleHQvY3NzIiBocmVmPSIvL2V1aW0ubXN0YXIuY29tL01vZHVsZXMvQXVkaWVuY2VUeXBlQmFja0ZpbGwvY3NzL0NvbmZpcm1UZW1wLm1pbi5jc3MiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgICAkKGZ1bmN0aW9uICgpIHsKICAgICAgJCgnI2RpYWxvZy1ib3R0b20tY29udGVudCBwJykucmVtb3ZlKCk7CiAgICAgICQoJyNkaWFsb2ctYm90dG9tLWNvbnRlbnQgYScpLnJlbW92ZUNsYXNzKCk7CiAgICAgICQoJyNkaWFsb2ctYm90dG9tLWNvbnRlbnQgc3BhbicpLnJlbW92ZUNsYXNzKCk7CiAgICAgICQoJyNkaWFsb2ctYm90dG9tLWNvbnRlbnQgYScpLmFkZENsYXNzKCdBY0NvcHlSaWdodExpbmUnKTsKICAgICAgJCgnI2RpYWxvZy1ib3R0b20tY29udGVudCBzcGFuJykuYWRkQ2xhc3MoJ0FjQ29weVJpZ2h0TGluZScpOwogICAgICAkKCcjZGlhbG9nLWJvdHRvbS1jb250ZW50JykuY3NzKCdmb250LXNpemUnLCcxM3B4Jyk7CiAgICAgIH0pOwogICAgPC9zY3JpcHQ+PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIgaHJlZj0iIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+DQo8ZGl2IGNsYXNzPSJtYWluIiBzdHlsZT0ibWFyZ2luOjAgYXV0" />
+<input type="hidden" name="__VIEWSTATE1" id="__VIEWSTATE1" value="bzsiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgPGRpdiBjbGFzcz0ibGVmdENvbHVtbiBtZHMtZm9ybV9fbGFiZWwiIHN0eWxlPSJ3aWR0aDp1bnNldCI+DQogICAgPGgxPkNvbmZpcm1hY2nDs24gYXVkaWVuY2lhPC9oMT4NCiAgPC9kaXY+DQogIDxkaXYgaWQ9ImV4cGlyZWRMYWJlbCIgY2xhc3M9Im1kcy1zd2l0Y2ggbWRzLXN3aXRjaC0tbGFyZ2UiIHN0eWxlPSJ3aWR0aDphdXRvO3BhZGRpbmctYm90dG9tOjEwcHg7ZmxvYXQ6cmlnaHQ7bWFyZ2luLXJpZ2h0OjFweCI+PGxhYmVsIGlkPSJSZW1lbWJlckxhYmVsIiBjbGFzcz0ibWRzLXN3aXRjaF9fbGFiZWwiIGZvcj0icmVtZW1iZXIiPjxpbnB1dCBpZD0icmVtZW1iZXIiIG5hbWU9InJlbWVtYmVyIiB0eXBlPSJjaGVja2JveCIgcm9sZT0ic3dpdGNoIiBjbGFzcz0ibWRzLXN3aXRjaF9faW5wdXQiIGNoZWNrZWQ+PHNwYW4gY2xhc3M9Im1kcy1zd2l0Y2hfX3RleHQiIHN0eWxlPSJmb250LXNpemU6MTVweDtwYWRkaW5nLXRvcDozcHgiPjwvc3Bhbj48L2xhYmVsPjwvZGl2Pg0KICA8aHI+DQogIDxwPjwvcD4NCiAgPGRpdiBzdHlsZT0ibWFyZ2luLWxlZnQ6MSUiPg0KICAgIDxkaXYgY2xhc3M9Im1kcy1mb3JtX19maWVsZC1ncm91cCBtZHMtZm9ybV9fZmllbGQtZ3JvdXAtLWhvcml6b250YWwiIHN0eWxlPSJtYXJnaW4tdG9wOjQlIj4NCiAgICAgIDxkaXYgaWQ9ImludmVzdG9yVHlwZSI+DQogICAgICAgIDxmaWVsZHNldCBjbGFzcz0ibWRzLWZvcm1fX3JhZGlvLWJ1dHRvbi1ncm91cCIgcm9sZT0icmFkaW9ncm91cCIgaWQ9InVzZXJ0eXBlIj4NCiAgICAgICAgICA8bGVnZW5kIGNsYXNzPSJtZHMtZm9ybV9fcmFkaW8tYnV0dG9uLWdyb3VwLWxhYmVsIj48L2xlZ2VuZD4NCiAgICAgICAgICA8ZGl2IGNsYXNzPSJtZHMtZm9ybV9fcmFkaW8tYnV0dG9uIGxlZnRDb2x1bW4iPjxsYWJlbCBjbGFzcz0ibWRzLWZvcm1fX3JhZGlvLWJ1dHRvbiIgZm9yPSIvY2EvbWVtYmVyc2hpcC9hdWRpZW5jZS10eXBlL3VwZGF0ZTM/dHlwZT02Ij48aW5wdXQgbmFtZT0iaWQtMjU2OTEiIHZhbHVlPSJibHVlIiB0eXBlPSJyYWRpbyIgY2xhc3M9Im1kcy1mb3JtX19yYWRpby1idXR0b24taW5wdXQiIGlkPSIvY2EvbWVtYmVyc2hpcC9hdWRpZW5jZS10eXBlL3VwZGF0ZTM/dHlwZT02Ij48c3BhbiBpZD0iZmluYXByb2Zlc3Npb25hbCIgY2xhc3M9Im1kcy1mb3JtX19yYWRpby1idXR0b24tdmlzaWJsZS13cmFwIj48c3BhbiBjbGFzcz0ibWRzLWZvcm1fX3JhZGlvLWJ1dHRvbi12aXN1YWwiPjwvc3Bhbj48c3BhbiBjbGFzcz0ibWRzLWZvcm1fX3JhZGlvLWJ1dHRvbi10ZXh0Ij5Tb3kgdW4gcHJvZmVzaW9uYWwgZmluYW5jaWVybzwvc3Bhbj48L3NwYW4+PC9sYWJlbD48cD48L3A+DQogICAgICAgICAgPC9kaXY+DQogICAgICAgICAgPGRpdiBjbGFzcz0ibWRzLWZvcm1fX3JhZGlvLWJ1dHRvbiByaWdodENvbHVtbiI+PGxhYmVsIGNsYXNzPSJtZHMtZm9ybV9fcmFk" />
+<input type="hidden" name="__VIEWSTATE2" id="__VIEWSTATE2" value="aW8tYnV0dG9uIiBmb3I9Ii9jYS9tZW1iZXJzaGlwL2F1ZGllbmNlLXR5cGUvdXBkYXRlMz90eXBlPTIiPjxpbnB1dCBuYW1lPSJpZC0yNTY5MSIgdmFsdWU9ImJsdWUiIHR5cGU9InJhZGlvIiBjbGFzcz0ibWRzLWZvcm1fX3JhZGlvLWJ1dHRvbi1pbnB1dCIgaWQ9Ii9jYS9tZW1iZXJzaGlwL2F1ZGllbmNlLXR5cGUvdXBkYXRlMz90eXBlPTIiPjxzcGFuIGlkPSJpbmRpdmlkdWFsaW52ZXN0b3IiIGNsYXNzPSJtZHMtZm9ybV9fcmFkaW8tYnV0dG9uLXZpc2libGUtd3JhcCI+PHNwYW4gY2xhc3M9Im1kcy1mb3JtX19yYWRpby1idXR0b24tdmlzdWFsIj48L3NwYW4+PHNwYW4gY2xhc3M9Im1kcy1mb3JtX19yYWRpby1idXR0b24tdGV4dCI+U295IHVuIGludmVyc29yIGluZGl2aWR1YWw8L3NwYW4+PC9zcGFuPjwvbGFiZWw+PHA+PC9wPg0KICAgICAgICAgIDwvZGl2Pg0KICAgICAgICA8L2ZpZWxkc2V0Pg0KICAgICAgPC9kaXY+DQogICAgICA8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmUiIGlkPSJjaG9vc2Vub3RpY2UiPjxzdmcgY2xhc3M9Im1kcy1pY29uIj48c3ltYm9sIHZpZXdCb3g9IjAgMCAxNTAwIDE1MDAiIGlkPSJleGNsYWltLWNpcmNsZS1maWxsLS1zIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICAgICAgICAgICAgPHBhdGggZD0iTTc1MC4xIDBDMzQwLjEgMCAuMSAzNDAgLjEgNzUwczM0MCA3NTAgNzUwIDc1MCA3NTAtMzQwIDc1MC03NTAtMzMwLTc1MC03NTAtNzUwem0xMTAgMTI0MGgtMjEwdi0yMTBoMjEwdjIxMHptMC0zNTBoLTIxMFYyNjBoMjEwdjYzMHoiIC8+DQogICAgICAgICAgPC9zeW1ib2w+PHVzZSB4bGluazpocmVmPSIjZXhjbGFpbS1jaXJjbGUtZmlsbC0tcyI+PC91c2U+PC9zdmc+PC9kaXY+DQogICAgICA8ZGl2IGNsYXNzPSJtZHMtdG9vbHRpcF9fd3JhcHBlciI+PGJ1dHRvbiBjbGFzcz0ibWRzLWJ1dHRvbiBtZHMtYnV0dG9uLS1pY29uLW9ubHkiIHR5cGU9ImJ1dHRvbiIgYXJpYS1kZXNjcmliZWRieT0iYXVkaWVuY2V0eXBlY29udGFpbmVyIj48ZGl2IGlkPSJhdWRpZW5jZXR5cGVjb250YWluZXIiIGNsYXNzPSJtZHMtdG9vbHRpcCBtZHMtdG9vbHRpcC0tZGVmYXVsdCBtZHMtdG9vbHRpcC0tZGVmYXVsdCBtZHMtdG9vbHRpcC0tbGVmdC1ib3R0b20iIHJvbGU9InRvb2x0aXAiIGFyaWEtaGlkZGVuPSJ0cnVlIiBhcmlhLWxhYmVsbGVkYnk9InRvb2x0aXB0ZXh0NCI+DQogICAgICAgICAgICA8ZGl2IGNsYXNzPSJtZHMtdG9vbHRpcF9fdGV4dCAiIGlkPSJpbnZlc3RvclR5cGVOb3RlIiBzdHlsZT0id2lkdGg6NDI4cHg7YmFja2dyb3VuZC1jb2xvcjp3aGl0ZTsiPk1vcm5pbmdzdGFyLmVzIHNlIGZpbmFuY2lhIGVuIHBhcnRlIGdyYWNpYXMgYSBsYSBwdWJsaWNpZGFkLiBFc3RvIG5vcyBheXVkYSBhIHByb3BvcmNpb25hciBhIHRvZG9zIGxvcyBpbnZlcnNvcmVzIGJ1ZW5vcyBjb250ZW5pZG9zLCBidWVub3MgZGF0b3MgeSBidWVuYXMgaGVycmFtaWVudGFzLiBQYXJhIHF1ZSBs" />
+<input type="hidden" name="__VIEWSTATE3" id="__VIEWSTATE3" value="YSBwdWJsaWNpZGFkIHNlYSByZWxldmFudGUgcGFyYSBudWVzdHJvcyB1c3VhcmlvcyBkZWJlbW9zIHNhYmVyIHNpIGVzIHVzdGVkIHVuIGludmVyc29yIHBhcnRpY3VsYXIgbyB1biBpbnZlcnNvciBwcm9mZXNpb25hbC48L2Rpdj4NCiAgICAgICAgICA8L2Rpdj48c3ZnIGNsYXNzPSJtZHMtaWNvbiBtZHMtYnV0dG9uX19pY29uIG1kcy1idXR0b25fX2ljb24tLWxlZnQiIGFyaWEtaGlkZGVuPSJ0cnVlIj48c3ltYm9sIHZpZXdCb3g9IjAgMCAyMyAyMyIgaWQ9InF1ZXN0aW9uLWNpcmNsZS1wYWRsZXNzIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICAgICAgICAgICAgICA8cGF0aCBkPSJNMTAuNSAxOS41aDJ2LTJoLTJ2MnpNMTEuNDg1IDBDNS4xNTIgMCAwIDUuMTUyIDAgMTEuNDg0IDAgMTcuODE3IDUuMTUyIDIyLjk3IDExLjQ4NSAyMi45N2M2LjMyNiAwIDExLjQ3My01LjE1MiAxMS40NzMtMTEuNDg2QzIyLjk1OCA1LjE1MiAxNy44MTIgMCAxMS40ODUgMHptMCAyMS45N0M1LjcwNCAyMS45NyAxIDE3LjI2NiAxIDExLjQ4NCAxIDUuNzAzIDUuNzA0IDEgMTEuNDg1IDFjNS43NzQgMCAxMC40NzMgNC43MDMgMTAuNDczIDEwLjQ4NCAwIDUuNzgyLTQuNjk4IDEwLjQ4Ni0xMC40NzMgMTAuNDg2em0tLjAyNC0xNy42OTRjLTIuNDMgMC0zLjU1IDEuMDY3LTQuMDYyIDEuOTYyLS41ODUgMS4wMjYtLjU4NSAyLjE0Ny0uNTg1IDIuNjg2aDEuNWMwLS40NDEgMC0xLjI2Mi4zODktMS45NDIuNDYzLS44MTEgMS4zNjYtMS4yMDYgMi43NTktMS4yMDYgMS4xNDUgMCAyLjAyMS4yNTMgMi41MjIuNzI0LjQyLjQxLjYyNC44NzQuNjQyIDEuNDEyLS4wNDkgMS41MzYtLjczNiAyLjI2OS0xLjgwMSAzLjIzMy0uODQxLjgyOS0yLjExMiAyLjA4MS0yLjExMyA0LjZoMS41YzAtMS44OTIuODg1LTIuNzYzIDEuNjQyLTMuNTEuOTI4LS44MzkgMi4xOTctMS45ODcgMi4yNzEtNC4zMjJhMy41MjcgMy41MjcgMCAwIDAtMS4xMDUtMi40OTdjLS44MDYtLjc1Ni0yLjAwMy0xLjE0LTMuNTU5LTEuMTR6IiAvPg0KICAgICAgICAgICAgPC9zeW1ib2w+PHVzZSB4bGluazpocmVmPSIjcXVlc3Rpb24tY2lyY2xlLXBhZGxlc3MiPjwvdXNlPjwvc3ZnPjwvYnV0dG9uPjwvZGl2Pg0KICAgIDwvZGl2Pg0KICAgIDxkaXYgaWQ9ImludmVzdG1lbnRJblVLIiBjbGFzcz0idG9wU3BhY2luZyBtZHMtZm9ybV9fZmllbGQtZ3JvdXAgbWRzLWZvcm1fX2ZpZWxkLWdyb3VwLS1ob3Jpem9udGFsIj48bGFiZWwgY2xhc3M9Im1kcy1mb3JtX19jaGVja2JveCIgZm9yPSJlbmFibGVJbnZlc3RtZW50SW5VSyI+PGlucHV0IGlkPSJlbmFibGVJbnZlc3RtZW50SW5VSyIgdHlwZT0iY2hlY2tib3giIGNsYXNzPSJtZHMtZm9ybV9fY2hlY2tib3gtaW5wdXQiIGNoZWNrZWQ+PHNwYW4gY2xhc3M9Im1kcy1mb3JtX19jaGVja2JveC12aXNpYmxlLXdyYXAiPjxzcGFuIGNsYXNzPSJtZHMtZm9ybV9fY2hlY2tib3gtdmlzdWFsIj48c3ZnIGNsYXNzPSJtZHMtaWNvbiBtZHMt" />
+<input type="hidden" name="__VIEWSTATE4" id="__VIEWSTATE4" value="Zm9ybV9fY2hlY2tib3gtY2hlY2tlZC1pY29uIiBhcmlhLWhpZGRlbj0idHJ1ZSI+PHN5bWJvbCB2aWV3Qm94PSIwIDAgMTUwMCAxNTAwIiBpZD0iY2hlY2stLXMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogICAgICAgICAgICAgICAgPHBhdGggZD0iTTEyNjAuNSAxOTkuNWwtNjYwIDk1MC0zNzAtMzYwLTcwIDcwIDQ1MCA0NDAgNzMwLTEwNTB6IiAvPg0KICAgICAgICAgICAgICA8L3N5bWJvbD48dXNlIHhsaW5rOmhyZWY9IiNjaGVjay0tcyI+PC91c2U+PC9zdmc+PHN2ZyBjbGFzcz0ibWRzLWljb24gbWRzLWZvcm1fX2NoZWNrYm94LWluZGV0ZXJtaW5hdGUtaWNvbiIgYXJpYS1oaWRkZW49InRydWUiPjxzeW1ib2wgdmlld0JveD0iMCAwIDE1MDAgMTUwMCIgaWQ9Im1pbnVzLS1zIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMzk5LjUgNzk5LjV2LTEwMEg5OS41djEwMHoiIC8+DQogICAgICAgICAgICAgIDwvc3ltYm9sPjx1c2UgeGxpbms6aHJlZj0iI21pbnVzLS1zIj48L3VzZT48L3N2Zz48L3NwYW4+PHNwYW4gY2xhc3M9Im1kcy1mb3JtX19jaGVja2JveC10ZXh0Ij5KZSBzdWlzIGFkbWlzc2libGUgw6AgZWZmZWN0dWVyIGRlcyBwbGFjZW1lbnRzIGF1IENhbmFkYS48L3NwYW4+PC9zcGFuPjwvbGFiZWw+PC9kaXY+DQogICAgPHAgc3R5bGU9ImNsZWFyOmJvdGg7Ij48L3A+DQogICAgPGRpdiBzdHlsZT0idGV4dC1hbGlnbjpsZWZ0O21hcmdpbi10b3A6NCUiPjxzcGFuIGNsYXNzPSJtZHMtZm9ybV9fcmFkaW8tYnV0dG9uIj5OdWVzdHJvIHNpdGlvIHV0aWxpemEgY29va2llcyB5IG90cmFzIHRlY25vbG9nw61hcyBwYXJhIHBlcnNvbmFsaXphciBzdSBleHBlcmllbmNpYSB5IGNvbXByZW5kZXIgY8OzbW8gdXNhbiBlbCBzaXRpbyB1c3RlZCB5IG90cm9zIHZpc2l0YW50ZXMuIFZlciAnT3BjaW9uZXMgZGUgY29va2llcycgcGFyYSBtw6FzIGRldGFsbGVzLjwvc3Bhbj48L2Rpdj4NCiAgPC9kaXY+DQogIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyO21hcmdpbjo0JSAwIDIlIj48YnV0dG9uIGlkPSJfZXZpZG9uLWFjY2VwdC1idXR0b24iIGNsYXNzPSJtZHMtYnV0dG9uIG1kcy1idXR0b24tLXByaW1hcnkgbWRzLWJ1dHRvbi0tc21hbGwiIG9uY2xpY2s9InJldHVybiBTdWJtaXQoKSIgdHlwZT0iYnV0dG9uIj5BY2VwdGFyPC9idXR0b24+PC9kaXY+DQogIDxocj4NCiAgPGRpdj4NCiAgICA8dWwgc3R5bGU9InBhZGRpbmctbGVmdDowcHgiPg0KICAgICAgPGxpIHN0eWxlPSJkaXNwbGF5OmlubGluZS1mbGV4Ij4NCiAgICAgICAgPGRpdj48c3BhbiBjbGFzcz0ibWRzLWZvcm1fX3JhZGlvLWJ1dHRvbiI+T3Ryb3Mgc2l0aW9zIHdlYiBkZSBNb3JuaW5nc3Rhcjwvc3Bhbj48L2Rpdj4NCiAgICAgIDwvbGk+DQogICAgICA8bGkgc3R5bGU9ImRpc3BsYXk6aW5saW5lLWZsZXg7Ij4NCiAgICAgICAgPGRpdiBjbGFzcz0ibWRzLWZvcm1f" />
+<input type="hidden" name="__VIEWSTATE5" id="__VIEWSTATE5" value="X3NlbGVjdCBtZHMtZG9jLWh0bWwtZXhhbXBsZS1saXN0X19pdGVtIj48c2VsZWN0IGlkPSJjb3V0cnlkcm9wbGlzdCIgY2xhc3M9Im1kcy1mb3JtX19zZWxlY3QtaW5wdXQiPjxvcHRpb24gY2xhc3M9Im1kcy1mb3JtX19zZWxlY3Qtb3B0aW9uIiB2YWx1ZT0iIj5TZWxlY2Npb25lIHVuYSBvcGNpb248L29wdGlvbj4NCiAgICAgICAgICAgIDxvcHRpb24gY2xhc3M9Im1kcy1mb3JtX19zZWxlY3Qtb3B0aW9uIiB2YWx1ZT0iQXVzdHJpYSIgZGF0YWdyb3VwPSJncm91cG9uZSIgc2l0ZT0iaHR0cDovL3d3dy5tb3JuaW5nc3Rhci5hdCI+QXVzdHJpYTwvb3B0aW9uPg0KICAgICAgICAgICAgPG9wdGlvbiBjbGFzcz0ibWRzLWZvcm1fX3NlbGVjdC1vcHRpb24iIHZhbHVlPSJCZWxnaXVtIiBkYXRhZ3JvdXA9Imdyb3Vwb25lIiBzaXRlPSJodHRwOi8vd3d3Lm1vcm5pbmdzdGFyLmJlIj5CZWxnaXVtPC9vcHRpb24+DQogICAgICAgICAgICA8b3B0aW9uIGNsYXNzPSJtZHMtZm9ybV9fc2VsZWN0LW9wdGlvbiIgdmFsdWU9IkRlbm1hcmsiIGRhdGFncm91cD0iZ3JvdXBvbmUiIHNpdGU9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuZGsiPkRlbm1hcms8L29wdGlvbj4NCiAgICAgICAgICAgIDxvcHRpb24gY2xhc3M9Im1kcy1mb3JtX19zZWxlY3Qtb3B0aW9uIiB2YWx1ZT0iRmlubGFuZCIgZGF0YWdyb3VwPSJncm91cG9uZSIgc2l0ZT0iaHR0cDovL3d3dy5tb3JuaW5nc3Rhci5maSI+RmlubGFuZDwvb3B0aW9uPg0KICAgICAgICAgICAgPG9wdGlvbiBjbGFzcz0ibWRzLWZvcm1fX3NlbGVjdC1vcHRpb24iIHZhbHVlPSJGcmFuY2UiIGRhdGFncm91cD0iZ3JvdXBvbmUiIHNpdGU9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuZnIiPkZyYW5jZTwvb3B0aW9uPg0KICAgICAgICAgICAgPG9wdGlvbiBjbGFzcz0ibWRzLWZvcm1fX3NlbGVjdC1vcHRpb24iIHZhbHVlPSJHZXJtYW55IiBkYXRhZ3JvdXA9Imdyb3Vwb25lIiBzaXRlPSJodHRwOi8vd3d3Lm1vcm5pbmdzdGFyLmRlIj5HZXJtYW55PC9vcHRpb24+DQogICAgICAgICAgICA8b3B0aW9uIGNsYXNzPSJtZHMtZm9ybV9fc2VsZWN0LW9wdGlvbiIgdmFsdWU9IklyZWxhbmQiIGRhdGFncm91cD0iZ3JvdXBvbmUiIHNpdGU9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXJmdW5kcy5pZSI+SXJlbGFuZDwvb3B0aW9uPg0KICAgICAgICAgICAgPG9wdGlvbiBjbGFzcz0ibWRzLWZvcm1fX3NlbGVjdC1vcHRpb24iIHZhbHVlPSJJc3JhZWwiIGRhdGFncm91cD0iZ3JvdXBvbmUiIHNpdGU9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuY28uaWwiPklzcmFlbDwvb3B0aW9uPg0KICAgICAgICAgICAgPG9wdGlvbiBjbGFzcz0ibWRzLWZvcm1fX3NlbGVjdC1vcHRpb24iIHZhbHVlPSJJdGFseSIgZGF0YWdyb3VwPSJncm91cG9uZSIgc2l0ZT0iaHR0cDovL3d3dy5tb3JuaW5nc3Rhci5pdCI+SXRhbHk8L29wdGlvbj4NCiAgICAgICAgICAgIDxvcHRpb24gY2xhc3M9Im1kcy1mb3JtX19zZWxlY3Qtb3B0aW9uIiB2YWx1ZT0i" />
+<input type="hidden" name="__VIEWSTATE6" id="__VIEWSTATE6" value="TmV0aGVybGFuZHMiIGRhdGFncm91cD0iZ3JvdXBvbmUiIHNpdGU9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIubmwiPk5ldGhlcmxhbmRzPC9vcHRpb24+DQogICAgICAgICAgICA8b3B0aW9uIGNsYXNzPSJtZHMtZm9ybV9fc2VsZWN0LW9wdGlvbiIgdmFsdWU9Ik5vcndheSIgZGF0YWdyb3VwPSJncm91cG9uZSIgc2l0ZT0iaHR0cDovL3d3dy5tb3JuaW5nc3Rhci5ubyI+Tm9yd2F5PC9vcHRpb24+DQogICAgICAgICAgICA8b3B0aW9uIGNsYXNzPSJtZHMtZm9ybV9fc2VsZWN0LW9wdGlvbiIgdmFsdWU9IlBvcnR1Z2FsIiBkYXRhZ3JvdXA9Imdyb3Vwb25lIiBzaXRlPSJodHRwOi8vd3d3Lm1vcm5pbmdzdGFyLnB0Ij5Qb3J0dWdhbDwvb3B0aW9uPg0KICAgICAgICAgICAgPG9wdGlvbiBjbGFzcz0ibWRzLWZvcm1fX3NlbGVjdC1vcHRpb24iIHZhbHVlPSJTcGFpbiIgZGF0YWdyb3VwPSJncm91cG9uZSIgc2l0ZT0iaHR0cDovL3d3dy5tb3JuaW5nc3Rhci5lcyI+U3BhaW48L29wdGlvbj4NCiAgICAgICAgICAgIDxvcHRpb24gY2xhc3M9Im1kcy1mb3JtX19zZWxlY3Qtb3B0aW9uIiB2YWx1ZT0iU3dlZGVuIiBkYXRhZ3JvdXA9Imdyb3Vwb25lIiBzaXRlPSJodHRwOi8vd3d3Lm1vcm5pbmdzdGFyLnNlIj5Td2VkZW48L29wdGlvbj4NCiAgICAgICAgICAgIDxvcHRpb24gY2xhc3M9Im1kcy1mb3JtX19zZWxlY3Qtb3B0aW9uIiB2YWx1ZT0iU3dpdHplcmxhbmQiIGRhdGFncm91cD0iZ3JvdXBvbmUiIHNpdGU9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuY2giPlN3aXR6ZXJsYW5kPC9vcHRpb24+DQogICAgICAgICAgICA8b3B0aW9uIGNsYXNzPSJtZHMtZm9ybV9fc2VsZWN0LW9wdGlvbiIgdmFsdWU9IlVuaXRlZCBLaW5nZG9tIiBkYXRhZ3JvdXA9Imdyb3Vwb25lIiBzaXRlPSJodHRwOi8vd3d3Lm1vcm5pbmdzdGFyLmNvLnVrIj5Vbml0ZWQgS2luZ2RvbTwvb3B0aW9uPg0KICAgICAgICAgICAgPG9wdGlvbiBjbGFzcz0ibWRzLWZvcm1fX3NlbGVjdC1vcHRpb24iIHZhbHVlPSJTb3V0aCBBZnJpY2EiIGRhdGFncm91cD0iZ3JvdXBvbmUiIHNpdGU9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuY28uemEiPlNvdXRoIEFmcmljYTwvb3B0aW9uPg0KICAgICAgICAgICAgPG9wdGlvbiBjbGFzcz0ibWRzLWZvcm1fX3NlbGVjdC1vcHRpb24iIHZhbHVlPSJDYW5hZGEiIGRhdGFncm91cD0iZ3JvdXB0d28iIHNpdGU9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuY2EiPkNhbmFkYTwvb3B0aW9uPg0KICAgICAgICAgICAgPG9wdGlvbiBjbGFzcz0ibWRzLWZvcm1fX3NlbGVjdC1vcHRpb24iIHZhbHVlPSJCcmF6aWwiIGRhdGFncm91cD0iZ3JvdXB0d28iIHNpdGU9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXJici5jb20iPkJyYXppbDwvb3B0aW9uPg0KICAgICAgICAgICAgPG9wdGlvbiBjbGFzcz0ibWRzLWZvcm1fX3NlbGVjdC1vcHRpb24iIHZhbHVlPSJDaGlsZSIgZGF0YWdyb3VwPSJncm91cHR3byIgc2l0ZT0iaHR0cDovL3d3dy5tb3JuaW5nc3Rhci5jbCI+" />
+<input type="hidden" name="__VIEWSTATE7" id="__VIEWSTATE7" value="Q2hpbGU8L29wdGlvbj4NCiAgICAgICAgICAgIDxvcHRpb24gY2xhc3M9Im1kcy1mb3JtX19zZWxlY3Qtb3B0aW9uIiB2YWx1ZT0iTWV4aWNvIiBkYXRhZ3JvdXA9Imdyb3VwdHdvIiBzaXRlPSJodHRwOi8vd3d3Lm1vcm5pbmdzdGFyLmNvbS5teCI+TWV4aWNvPC9vcHRpb24+DQogICAgICAgICAgICA8b3B0aW9uIGNsYXNzPSJtZHMtZm9ybV9fc2VsZWN0LW9wdGlvbiIgdmFsdWU9IlVuaXRlZCBTdGF0ZXMiIGRhdGFncm91cD0iZ3JvdXB0d28iIHNpdGU9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuY29tIj5Vbml0ZWQgU3RhdGVzPC9vcHRpb24+DQogICAgICAgICAgICA8b3B0aW9uIGNsYXNzPSJtZHMtZm9ybV9fc2VsZWN0LW9wdGlvbiIgdmFsdWU9IkF1c3RyYWxpYSIgZGF0YWdyb3VwPSJncm91cHRocmVlIiBzaXRlPSJodHRwOi8vd3d3Lm1vcm5pbmdzdGFyLmNvbS5hdSI+QXVzdHJhbGlhPC9vcHRpb24+DQogICAgICAgICAgICA8b3B0aW9uIGNsYXNzPSJtZHMtZm9ybV9fc2VsZWN0LW9wdGlvbiIgdmFsdWU9IkNoaW5hIiBkYXRhZ3JvdXA9Imdyb3VwdGhyZWUiIHNpdGU9Imh0dHA6Ly93d3cuY24ubW9ybmluZ3N0YXIuY29tIj5DaGluYTwvb3B0aW9uPg0KICAgICAgICAgICAgPG9wdGlvbiBjbGFzcz0ibWRzLWZvcm1fX3NlbGVjdC1vcHRpb24iIHZhbHVlPSJIb25nIEtvbmciIGRhdGFncm91cD0iZ3JvdXB0aHJlZSIgc2l0ZT0iaHR0cDovL3d3dy5tb3JuaW5nc3Rhci5oayI+SG9uZyBLb25nPC9vcHRpb24+DQogICAgICAgICAgICA8b3B0aW9uIGNsYXNzPSJtZHMtZm9ybV9fc2VsZWN0LW9wdGlvbiIgdmFsdWU9IkluZGlhIiBkYXRhZ3JvdXA9Imdyb3VwdGhyZWUiIHNpdGU9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuaW4iPkluZGlhPC9vcHRpb24+DQogICAgICAgICAgICA8b3B0aW9uIGNsYXNzPSJtZHMtZm9ybV9fc2VsZWN0LW9wdGlvbiIgdmFsdWU9IkphcGFuIiBkYXRhZ3JvdXA9Imdyb3VwdGhyZWUiIHNpdGU9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuY28uanAiPkphcGFuPC9vcHRpb24+DQogICAgICAgICAgICA8b3B0aW9uIGNsYXNzPSJtZHMtZm9ybV9fc2VsZWN0LW9wdGlvbiIgdmFsdWU9IktvcmVhIiBkYXRhZ3JvdXA9Imdyb3VwdGhyZWUiIHNpdGU9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuY28ua3IiPktvcmVhPC9vcHRpb24+DQogICAgICAgICAgICA8b3B0aW9uIGNsYXNzPSJtZHMtZm9ybV9fc2VsZWN0LW9wdGlvbiIgdmFsdWU9Ik1hbGF5c2lhIiBkYXRhZ3JvdXA9Imdyb3VwdGhyZWUiIHNpdGU9Imh0dHA6Ly9teS5tb3JuaW5nc3Rhci5jb20iPk1hbGF5c2lhPC9vcHRpb24+DQogICAgICAgICAgICA8b3B0aW9uIGNsYXNzPSJtZHMtZm9ybV9fc2VsZWN0LW9wdGlvbiIgdmFsdWU9IlNpbmdhcG9yZSIgZGF0YWdyb3VwPSJncm91cHRocmVlIiBzaXRlPSJodHRwOi8vc2cubW9ybmluZ3N0YXIuY29tIj5TaW5nYXBvcmU8L29wdGlvbj4NCiAgICAgICAgICAgIDxvcHRpb24gY2xhc3M9Im1kcy1mb3JtX19zZWxl" />
+<input type="hidden" name="__VIEWSTATE8" id="__VIEWSTATE8" value="Y3Qtb3B0aW9uIiB2YWx1ZT0iVGFpd2FuIiBkYXRhZ3JvdXA9Imdyb3VwdGhyZWUiIHNpdGU9Imh0dHA6Ly90dy5tb3JuaW5nc3Rhci5jb20iPlRhaXdhbjwvb3B0aW9uPg0KICAgICAgICAgICAgPG9wdGlvbiBjbGFzcz0ibWRzLWZvcm1fX3NlbGVjdC1vcHRpb24iIHZhbHVlPSJUaGFpbGFuZCIgZGF0YWdyb3VwPSJncm91cHRocmVlIiBzaXRlPSJodHRwOi8vd3d3Lm1vcm5pbmdzdGFydGhhaWxhbmQuY29tIj5UaGFpbGFuZDwvb3B0aW9uPjwvc2VsZWN0PjxkaXYgY2xhc3M9Im1kcy1mb3JtX19zZWxlY3QtdmlzdWFsLXdyYXAiPjwvZGl2PjxzcGFuIGNsYXNzPSJtZHMtZm9ybV9fc2VsZWN0LW9wZW4taW5kaWNhdG9yIj48c3ZnIGNsYXNzPSJtZHMtaWNvbiBtZHMtZm9ybV9fc2VsZWN0LW9wZW4taWNvbiIgYXJpYS1oaWRkZW49InRydWUiPjxzeW1ib2wgdmlld0JveD0iMCAwIDE1MDAgMTUwMCIgaWQ9ImNhcmV0LWRvd24tLXMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogICAgICAgICAgICAgICAgPHBhdGggZD0iTTExNzkuNSAzMTAuNWwtNDMwIDY5MC00MzAtNjkwLTgwIDYwIDUxMCA4MjAgNTEwLTgyMHoiIC8+DQogICAgICAgICAgICAgIDwvc3ltYm9sPjx1c2UgeGxpbms6aHJlZj0iI2NhcmV0LWRvd24tLXMiPjwvdXNlPjwvc3ZnPjwvc3Bhbj48L2Rpdj4NCiAgICAgIDwvbGk+DQogICAgPC91bD4NCiAgICA8ZGl2IGlkPSJncm91cG9uZSI+DQogICAgICA8dWwgc3R5bGU9Imxpc3Qtc3R5bGUtdHlwZTpub25lO292ZXJmbG93LXg6YXV0bzsgd2hpdGUtc3BhY2U6bm93cmFwO3dpZHRoOmF1dG87cGFkZGluZzowIj4NCiAgICAgICAgPGxpIHN0eWxlPSJkaXNwbGF5OmlubGluZS1ibG9jazsiPjxhIGhyZWY9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuYXQiIHRhcmdldD0icGFyZW50Ij48ZGl2IHN0eWxlPSJ3aWR0aDogMzVweDtoZWlnaHQ6IDM1cHg7YmFja2dyb3VuZC1pbWFnZTogdXJsKC8vZXVpbS5tc3Rhci5jb20vSW1hZ2VzL2NvdW50cnlJbWcvRmxhZ3NfYWxsX3NtYWxsLnBuZyk7YmFja2dyb3VuZC1wb3NpdGlvbjogLTEyNXB4IC0xcHg7YmFja2dyb3VuZC1zaXplOiAxNDAwJTsiPjwvZGl2PjwvYT48L2xpPg0KICAgICAgICA8bGkgc3R5bGU9ImRpc3BsYXk6aW5saW5lLWJsb2NrIj48YSBocmVmPSJodHRwOi8vd3d3Lm1vcm5pbmdzdGFyLmJlIiB0YXJnZXQ9InBhcmVudCI+PGRpdiBzdHlsZT0id2lkdGg6IDM1cHg7aGVpZ2h0OiAzNXB4O2JhY2tncm91bmQtaW1hZ2U6IHVybCgvL2V1aW0ubXN0YXIuY29tL0ltYWdlcy9jb3VudHJ5SW1nL0ZsYWdzX2FsbF9zbWFsbC5wbmcpO2JhY2tncm91bmQtcG9zaXRpb246IC0xNjVweCAtMXB4O2JhY2tncm91bmQtc2l6ZTogMTQwMCU7Ij48L2Rpdj48L2E+PC9saT4NCiAgICAgICAgPGxpIHN0eWxlPSJkaXNwbGF5OmlubGluZS1ibG9jayI+PGEgaHJlZj0iaHR0cDovL3d3dy5tb3JuaW5nc3Rhci5kayIgdGFyZ2V0PSJwYXJlbnQiPjxkaXYgc3R5bGU9IndpZHRo" />
+<input type="hidden" name="__VIEWSTATE9" id="__VIEWSTATE9" value="OiAzNXB4O2hlaWdodDogMzVweDtiYWNrZ3JvdW5kLWltYWdlOiB1cmwoLy9ldWltLm1zdGFyLmNvbS9JbWFnZXMvY291bnRyeUltZy9GbGFnc19hbGxfc21hbGwucG5nKTtiYWNrZ3JvdW5kLXBvc2l0aW9uOiAtMzY4cHggLTFweDtiYWNrZ3JvdW5kLXNpemU6IDE0MDAlOyI+PC9kaXY+PC9hPjwvbGk+DQogICAgICAgIDxsaSBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2siPjxhIGhyZWY9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuZmkiIHRhcmdldD0icGFyZW50Ij48ZGl2IHN0eWxlPSJ3aWR0aDogMzVweDtoZWlnaHQ6IDM1cHg7YmFja2dyb3VuZC1pbWFnZTogdXJsKC8vZXVpbS5tc3Rhci5jb20vSW1hZ2VzL2NvdW50cnlJbWcvRmxhZ3NfYWxsX3NtYWxsLnBuZyk7YmFja2dyb3VuZC1wb3NpdGlvbjogLTQwOHB4IC0xcHg7YmFja2dyb3VuZC1zaXplOiAxNDAwJTsiPjwvZGl2PjwvYT48L2xpPg0KICAgICAgICA8bGkgc3R5bGU9ImRpc3BsYXk6aW5saW5lLWJsb2NrIj48YSBocmVmPSJodHRwOi8vd3d3Lm1vcm5pbmdzdGFyLmZyIiB0YXJnZXQ9InBhcmVudCI+PGRpdiBzdHlsZT0id2lkdGg6IDM1cHg7aGVpZ2h0OiAzNXB4O2JhY2tncm91bmQtaW1hZ2U6IHVybCgvL2V1aW0ubXN0YXIuY29tL0ltYWdlcy9jb3VudHJ5SW1nL0ZsYWdzX2FsbF9zbWFsbC5wbmcpO2JhY2tncm91bmQtcG9zaXRpb246IC00NDlweCAtMXB4O2JhY2tncm91bmQtc2l6ZTogMTQwMCU7Ij48L2Rpdj48L2E+PC9saT4NCiAgICAgICAgPGxpIHN0eWxlPSJkaXNwbGF5OmlubGluZS1ibG9jayI+PGEgaHJlZj0iaHR0cDovL3d3dy5tb3JuaW5nc3Rhci5kZSIgdGFyZ2V0PSJwYXJlbnQiPjxkaXYgc3R5bGU9IndpZHRoOiAzNXB4O2hlaWdodDogMzVweDtiYWNrZ3JvdW5kLWltYWdlOiB1cmwoLy9ldWltLm1zdGFyLmNvbS9JbWFnZXMvY291bnRyeUltZy9GbGFnc19hbGxfc21hbGwucG5nKTtiYWNrZ3JvdW5kLXBvc2l0aW9uOiAtM3B4IC00MHB4O2JhY2tncm91bmQtc2l6ZTogMTQwMCU7Ij48L2Rpdj48L2E+PC9saT4NCiAgICAgICAgPGxpIHN0eWxlPSJkaXNwbGF5OmlubGluZS1ibG9jayI+PGEgaHJlZj0iaHR0cDovL3d3dy5tb3JuaW5nc3RhcmZ1bmRzLmllIiB0YXJnZXQ9InBhcmVudCI+PGRpdiBzdHlsZT0id2lkdGg6IDM1cHg7aGVpZ2h0OiAzNXB4O2JhY2tncm91bmQtaW1hZ2U6IHVybCgvL2V1aW0ubXN0YXIuY29tL0ltYWdlcy9jb3VudHJ5SW1nL0ZsYWdzX2FsbF9zbWFsbC5wbmcpO2JhY2tncm91bmQtcG9zaXRpb246IC0xMjVweCAtNDBweDtiYWNrZ3JvdW5kLXNpemU6IDE0MDAlOyI+PC9kaXY+PC9hPjwvbGk+DQogICAgICAgIDxsaSBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2siPjxhIGhyZWY9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuaXQiIHRhcmdldD0icGFyZW50Ij48ZGl2IHN0eWxlPSJ3aWR0aDogMzVweDtoZWlnaHQ6IDM1cHg7YmFja2dyb3VuZC1pbWFnZTogdXJsKC8vZXVpbS5tc3Rhci5jb20vSW1hZ2VzL2NvdW50cnlJbWcvRmxh" />
+<input type="hidden" name="__VIEWSTATE10" id="__VIEWSTATE10" value="Z3NfYWxsX3NtYWxsLnBuZyk7YmFja2dyb3VuZC1wb3NpdGlvbjogLTIwNXB4IC00MHB4O2JhY2tncm91bmQtc2l6ZTogMTQwMCU7Ij48L2Rpdj48L2E+PC9saT4NCiAgICAgICAgPGxpIHN0eWxlPSJkaXNwbGF5OmlubGluZS1ibG9jayI+PGEgaHJlZj0iaHR0cDovL3d3dy5tb3JuaW5nc3Rhci5ubCIgdGFyZ2V0PSJwYXJlbnQiPjxkaXYgc3R5bGU9IndpZHRoOiAzNXB4O2hlaWdodDogMzVweDtiYWNrZ3JvdW5kLWltYWdlOiB1cmwoLy9ldWltLm1zdGFyLmNvbS9JbWFnZXMvY291bnRyeUltZy9GbGFnc19hbGxfc21hbGwucG5nKTtiYWNrZ3JvdW5kLXBvc2l0aW9uOiAtMzY4cHggLTQwcHg7YmFja2dyb3VuZC1zaXplOiAxNDAwJTsiPjwvZGl2PjwvYT48L2xpPg0KICAgICAgICA8bGkgc3R5bGU9ImRpc3BsYXk6aW5saW5lLWJsb2NrIj48YSBocmVmPSJodHRwOi8vd3d3Lm1vcm5pbmdzdGFyLm5vIiB0YXJnZXQ9InBhcmVudCI+PGRpdiBzdHlsZT0id2lkdGg6IDM1cHg7aGVpZ2h0OiAzNXB4O2JhY2tncm91bmQtaW1hZ2U6IHVybCgvL2V1aW0ubXN0YXIuY29tL0ltYWdlcy9jb3VudHJ5SW1nL0ZsYWdzX2FsbF9zbWFsbC5wbmcpO2JhY2tncm91bmQtcG9zaXRpb246IC00MDhweCAtNDBweDtiYWNrZ3JvdW5kLXNpemU6IDE0MDAlOyI+PC9kaXY+PC9hPjwvbGk+DQogICAgICAgIDxsaSBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2siPjxhIGhyZWY9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIucHQiIHRhcmdldD0icGFyZW50Ij48ZGl2IHN0eWxlPSJ3aWR0aDogMzVweDtoZWlnaHQ6IDM1cHg7YmFja2dyb3VuZC1pbWFnZTogdXJsKC8vZXVpbS5tc3Rhci5jb20vSW1hZ2VzL2NvdW50cnlJbWcvRmxhZ3NfYWxsX3NtYWxsLnBuZyk7YmFja2dyb3VuZC1wb3NpdGlvbjogLTQ0OXB4IC00MHB4O2JhY2tncm91bmQtc2l6ZTogMTQwMCU7Ij48L2Rpdj48L2E+PC9saT4NCiAgICAgICAgPGxpIHN0eWxlPSJkaXNwbGF5OmlubGluZS1ibG9jayI+PGEgaHJlZj0iaHR0cDovL3d3dy5tb3JuaW5nc3Rhci5lcyIgdGFyZ2V0PSJwYXJlbnQiPjxkaXYgc3R5bGU9IndpZHRoOiAzNXB4O2hlaWdodDogMzVweDtiYWNrZ3JvdW5kLWltYWdlOiB1cmwoLy9ldWltLm1zdGFyLmNvbS9JbWFnZXMvY291bnRyeUltZy9GbGFnc19hbGxfc21hbGwucG5nKTtiYWNrZ3JvdW5kLXBvc2l0aW9uOiAtMTI1cHggLTc4cHg7YmFja2dyb3VuZC1zaXplOiAxNDAwJTsiPjwvZGl2PjwvYT48L2xpPg0KICAgICAgICA8bGkgc3R5bGU9ImRpc3BsYXk6aW5saW5lLWJsb2NrIj48YSBocmVmPSJodHRwOi8vd3d3Lm1vcm5pbmdzdGFyLnNlIiB0YXJnZXQ9InBhcmVudCI+PGRpdiBzdHlsZT0id2lkdGg6IDM1cHg7aGVpZ2h0OiAzNXB4O2JhY2tncm91bmQtaW1hZ2U6IHVybCgvL2V1aW0ubXN0YXIuY29tL0ltYWdlcy9jb3VudHJ5SW1nL0ZsYWdzX2FsbF9zbWFsbC5wbmcpO2JhY2tncm91bmQtcG9zaXRpb246IC0xNjVweCAtNzhweDtiYWNrZ3JvdW5kLXNpemU6IDE0MDAlOyI+PC9k" />
+<input type="hidden" name="__VIEWSTATE11" id="__VIEWSTATE11" value="aXY+PC9hPjwvbGk+DQogICAgICAgIDxsaSBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2siPjxhIGhyZWY9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuY2giIHRhcmdldD0icGFyZW50Ij48ZGl2IHN0eWxlPSJ3aWR0aDogMzVweDtoZWlnaHQ6IDM1cHg7YmFja2dyb3VuZC1pbWFnZTogdXJsKC8vZXVpbS5tc3Rhci5jb20vSW1hZ2VzL2NvdW50cnlJbWcvRmxhZ3NfYWxsX3NtYWxsLnBuZyk7YmFja2dyb3VuZC1wb3NpdGlvbjogLTIwNXB4IC03OHB4O2JhY2tncm91bmQtc2l6ZTogMTQwMCU7Ij48L2Rpdj48L2E+PC9saT4NCiAgICAgICAgPGxpIHN0eWxlPSJkaXNwbGF5OmlubGluZS1ibG9jayI+PGEgaHJlZj0iaHR0cDovL3d3dy5tb3JuaW5nc3Rhci5jby51ayIgdGFyZ2V0PSJwYXJlbnQiPjxkaXYgc3R5bGU9IndpZHRoOiAzNXB4O2hlaWdodDogMzVweDtiYWNrZ3JvdW5kLWltYWdlOiB1cmwoLy9ldWltLm1zdGFyLmNvbS9JbWFnZXMvY291bnRyeUltZy9GbGFnc19hbGxfc21hbGwucG5nKTtiYWNrZ3JvdW5kLXBvc2l0aW9uOiAtMzI4cHggLTc4cHg7YmFja2dyb3VuZC1zaXplOiAxNDAwJTsiPjwvZGl2PjwvYT48L2xpPg0KICAgICAgPC91bD4NCiAgICA8L2Rpdj4NCiAgICA8ZGl2IGlkPSJncm91cHR3byIgc3R5bGU9ImRpc3BsYXk6bm9uZSI+DQogICAgICA8dWwgc3R5bGU9Imxpc3Qtc3R5bGUtdHlwZTpub25lO292ZXJmbG93LXg6YXV0bzsgd2hpdGUtc3BhY2U6bm93cmFwO3dpZHRoOmF1dG87cGFkZGluZzowIj4NCiAgICAgICAgPGxpIHN0eWxlPSJkaXNwbGF5OmlubGluZS1ibG9jazsiPjxhIGhyZWY9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuY2EiIHRhcmdldD0icGFyZW50Ij48ZGl2IHN0eWxlPSJ3aWR0aDogMzVweDtoZWlnaHQ6IDM1cHg7YmFja2dyb3VuZC1pbWFnZTogdXJsKC8vZXVpbS5tc3Rhci5jb20vSW1hZ2VzL2NvdW50cnlJbWcvRmxhZ3NfYWxsX3NtYWxsLnBuZyk7YmFja2dyb3VuZC1wb3NpdGlvbjogLTI0NXB4IC0xcHg7YmFja2dyb3VuZC1zaXplOiAxNDAwJTsiPjwvZGl2PjwvYT48L2xpPg0KICAgICAgICA8bGkgc3R5bGU9ImRpc3BsYXk6aW5saW5lLWJsb2NrIj48YSBocmVmPSJodHRwOi8vd3d3Lm1vcm5pbmdzdGFyYnIuY29tIiB0YXJnZXQ9InBhcmVudCI+PGRpdiBzdHlsZT0id2lkdGg6IDM1cHg7aGVpZ2h0OiAzNXB4O2JhY2tncm91bmQtaW1hZ2U6IHVybCgvL2V1aW0ubXN0YXIuY29tL0ltYWdlcy9jb3VudHJ5SW1nL0ZsYWdzX2FsbF9zbWFsbC5wbmcpO2JhY2tncm91bmQtcG9zaXRpb246IC0yMDVweCAtMXB4O2JhY2tncm91bmQtc2l6ZTogMTQwMCU7Ij48L2Rpdj48L2E+PC9saT4NCiAgICAgICAgPGxpIHN0eWxlPSJkaXNwbGF5OmlubGluZS1ibG9jayI+PGEgaHJlZj0iaHR0cDovL3d3dy5tb3JuaW5nc3Rhci5jbCIgdGFyZ2V0PSJwYXJlbnQiPjxkaXYgc3R5bGU9IndpZHRoOiAzNXB4O2hlaWdodDogMzVweDtiYWNrZ3JvdW5kLWltYWdlOiB1cmwoLy9ldWltLm1zdGFyLmNvbS9JbWFnZXMv" />
+<input type="hidden" name="__VIEWSTATE12" id="__VIEWSTATE12" value="Y291bnRyeUltZy9GbGFnc19hbGxfc21hbGwucG5nKTtiYWNrZ3JvdW5kLXBvc2l0aW9uOiAtMjg2cHggLTFweDtiYWNrZ3JvdW5kLXNpemU6IDE0MDAlOyI+PC9kaXY+PC9hPjwvbGk+DQogICAgICAgIDxsaSBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2siPjxhIGhyZWY9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuY29tLm14IiB0YXJnZXQ9InBhcmVudCI+PGRpdiBzdHlsZT0id2lkdGg6IDM1cHg7aGVpZ2h0OiAzNXB4O2JhY2tncm91bmQtaW1hZ2U6IHVybCgvL2V1aW0ubXN0YXIuY29tL0ltYWdlcy9jb3VudHJ5SW1nL0ZsYWdzX2FsbF9zbWFsbC5wbmcpO2JhY2tncm91bmQtcG9zaXRpb246IC0zMjhweCAtNDBweDtiYWNrZ3JvdW5kLXNpemU6IDE0MDAlOyI+PC9kaXY+PC9hPjwvbGk+DQogICAgICAgIDxsaSBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2siPjxhIGhyZWY9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuY29tIiB0YXJnZXQ9InBhcmVudCI+PGRpdiBzdHlsZT0id2lkdGg6IDM1cHg7aGVpZ2h0OiAzNXB4O2JhY2tncm91bmQtaW1hZ2U6IHVybCgvL2V1aW0ubXN0YXIuY29tL0ltYWdlcy9jb3VudHJ5SW1nL0ZsYWdzX2FsbF9zbWFsbC5wbmcpO2JhY2tncm91bmQtcG9zaXRpb246IC0zNjhweCAtNzdweDtiYWNrZ3JvdW5kLXNpemU6IDE0MDAlOyI+PC9kaXY+PC9hPjwvbGk+DQogICAgICA8L3VsPg0KICAgIDwvZGl2Pg0KICAgIDxkaXYgaWQ9Imdyb3VwdGhyZWUiIHN0eWxlPSJkaXNwbGF5Om5vbmUiPg0KICAgICAgPHVsIHN0eWxlPSJsaXN0LXN0eWxlLXR5cGU6bm9uZTtvdmVyZmxvdy14OmF1dG87IHdoaXRlLXNwYWNlOm5vd3JhcDt3aWR0aDphdXRvO3BhZGRpbmc6MCI+DQogICAgICAgIDxsaSBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7Ij48YSBocmVmPSJodHRwOi8vd3d3Lm1vcm5pbmdzdGFyLmNvbS5hdSIgdGFyZ2V0PSJwYXJlbnQiPjxkaXYgc3R5bGU9IndpZHRoOiAzNXB4O2hlaWdodDogMzVweDtiYWNrZ3JvdW5kLWltYWdlOiB1cmwoLy9ldWltLm1zdGFyLmNvbS9JbWFnZXMvY291bnRyeUltZy9GbGFnc19hbGxfc21hbGwucG5nKTtiYWNrZ3JvdW5kLXBvc2l0aW9uOiAtODVweCAtMXB4OztiYWNrZ3JvdW5kLXNpemU6IDE0MDAlOyI+PC9kaXY+PC9hPjwvbGk+DQogICAgICAgIDxsaSBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2siPjxhIGhyZWY9Imh0dHA6Ly93d3cuY24ubW9ybmluZ3N0YXIuY29tIiB0YXJnZXQ9InBhcmVudCI+PGRpdiBzdHlsZT0id2lkdGg6IDM1cHg7aGVpZ2h0OiAzNXB4O2JhY2tncm91bmQtaW1hZ2U6IHVybCgvL2V1aW0ubXN0YXIuY29tL0ltYWdlcy9jb3VudHJ5SW1nL0ZsYWdzX2FsbF9zbWFsbC5wbmcpO2JhY2tncm91bmQtcG9zaXRpb246IC0zMjhweCAtMXB4O2JhY2tncm91bmQtc2l6ZTogMTQwMCU7Ij48L2Rpdj48L2E+PC9saT4NCiAgICAgICAgPGxpIHN0eWxlPSJkaXNwbGF5OmlubGluZS1ibG9jayI+PGEgaHJlZj0iaHR0cDovL3d3dy5tb3JuaW5nc3Rhci5o" />
+<input type="hidden" name="__VIEWSTATE13" id="__VIEWSTATE13" value="ayIgdGFyZ2V0PSJwYXJlbnQiPjxkaXYgc3R5bGU9IndpZHRoOiAzNXB4O2hlaWdodDogMzVweDtiYWNrZ3JvdW5kLWltYWdlOiB1cmwoLy9ldWltLm1zdGFyLmNvbS9JbWFnZXMvY291bnRyeUltZy9GbGFnc19hbGxfc21hbGwucG5nKTtiYWNrZ3JvdW5kLXBvc2l0aW9uOiAtNDNweCAtNDBweDtiYWNrZ3JvdW5kLXNpemU6IDE0MDAlOyI+PC9kaXY+PC9hPjwvbGk+DQogICAgICAgIDxsaSBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2siPjxhIGhyZWY9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuaW4iIHRhcmdldD0icGFyZW50Ij48ZGl2IHN0eWxlPSJ3aWR0aDogMzVweDtoZWlnaHQ6IDM1cHg7YmFja2dyb3VuZC1pbWFnZTogdXJsKC8vZXVpbS5tc3Rhci5jb20vSW1hZ2VzL2NvdW50cnlJbWcvRmxhZ3NfYWxsX3NtYWxsLnBuZyk7YmFja2dyb3VuZC1wb3NpdGlvbjogLTgzcHggLTQwcHg7YmFja2dyb3VuZC1zaXplOiAxNDAwJTsiPjwvZGl2PjwvYT48L2xpPg0KICAgICAgICA8bGkgc3R5bGU9ImRpc3BsYXk6aW5saW5lLWJsb2NrIj48YSBocmVmPSJodHRwOi8vd3d3Lm1vcm5pbmdzdGFyLmNvLmpwIiB0YXJnZXQ9InBhcmVudCI+PGRpdiBzdHlsZT0id2lkdGg6IDM1cHg7aGVpZ2h0OiAzNXB4O2JhY2tncm91bmQtaW1hZ2U6IHVybCgvL2V1aW0ubXN0YXIuY29tL0ltYWdlcy9jb3VudHJ5SW1nL0ZsYWdzX2FsbF9zbWFsbC5wbmcpO2JhY2tncm91bmQtcG9zaXRpb246IC0yNDVweCAtNDBweDtiYWNrZ3JvdW5kLXNpemU6IDE0MDAlOyI+PC9kaXY+PC9hPjwvbGk+DQogICAgICAgIDxsaSBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2siPjxhIGhyZWY9Imh0dHA6Ly93d3cubW9ybmluZ3N0YXIuY28ua3IiIHRhcmdldD0icGFyZW50Ij48ZGl2IHN0eWxlPSJ3aWR0aDogMzVweDtoZWlnaHQ6IDM1cHg7YmFja2dyb3VuZC1pbWFnZTogdXJsKC8vZXVpbS5tc3Rhci5jb20vSW1hZ2VzL2NvdW50cnlJbWcvRmxhZ3NfYWxsX3NtYWxsLnBuZyk7YmFja2dyb3VuZC1wb3NpdGlvbjogLTgzcHggLTc3cHg7YmFja2dyb3VuZC1zaXplOiAxNDAwJTsiPjwvZGl2PjwvYT48L2xpPg0KICAgICAgICA8bGkgc3R5bGU9ImRpc3BsYXk6aW5saW5lLWJsb2NrIj48YSBocmVmPSJodHRwOi8vbXkubW9ybmluZ3N0YXIuY29tIiB0YXJnZXQ9InBhcmVudCI+PGRpdiBzdHlsZT0id2lkdGg6IDM1cHg7aGVpZ2h0OiAzNXB4O2JhY2tncm91bmQtaW1hZ2U6IHVybCgvL2V1aW0ubXN0YXIuY29tL0ltYWdlcy9jb3VudHJ5SW1nL0ZsYWdzX2FsbF9zbWFsbC5wbmcpO2JhY2tncm91bmQtcG9zaXRpb246IC0yODVweCAtNDBweDtiYWNrZ3JvdW5kLXNpemU6IDE0MDAlOyI+PC9kaXY+PC9hPjwvbGk+DQogICAgICAgIDxsaSBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2siPjxhIGhyZWY9Imh0dHA6Ly9zZy5tb3JuaW5nc3Rhci5jb20iIHRhcmdldD0icGFyZW50Ij48ZGl2IHN0eWxlPSJ3aWR0aDogMzVweDtoZWlnaHQ6IDM1cHg7YmFja2dyb3VuZC1pbWFnZTogdXJs" />
+<input type="hidden" name="__VIEWSTATE14" id="__VIEWSTATE14" value="KC8vZXVpbS5tc3Rhci5jb20vSW1hZ2VzL2NvdW50cnlJbWcvRmxhZ3NfYWxsX3NtYWxsLnBuZyk7YmFja2dyb3VuZC1wb3NpdGlvbjogLTNweCAtNzdweDtiYWNrZ3JvdW5kLXNpemU6IDE0MDAlOyI+PC9kaXY+PC9hPjwvbGk+DQogICAgICAgIDxsaSBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2siPjxhIGhyZWY9Imh0dHA6Ly90dy5tb3JuaW5nc3Rhci5jb20iIHRhcmdldD0icGFyZW50Ij48ZGl2IHN0eWxlPSJ3aWR0aDogMzVweDtoZWlnaHQ6IDM1cHg7YmFja2dyb3VuZC1pbWFnZTogdXJsKC8vZXVpbS5tc3Rhci5jb20vSW1hZ2VzL2NvdW50cnlJbWcvRmxhZ3NfYWxsX3NtYWxsLnBuZyk7YmFja2dyb3VuZC1wb3NpdGlvbjogLTI0NXB4IC03N3B4O2JhY2tncm91bmQtc2l6ZTogMTQwMCU7Ij48L2Rpdj48L2E+PC9saT4NCiAgICAgICAgPGxpIHN0eWxlPSJkaXNwbGF5OmlubGluZS1ibG9jayI+PGEgaHJlZj0iaHR0cDovL3d3dy5tb3JuaW5nc3RhcnRoYWlsYW5kLmNvbSIgdGFyZ2V0PSJwYXJlbnQiPjxkaXYgc3R5bGU9IndpZHRoOiAzNXB4O2hlaWdodDogMzVweDtiYWNrZ3JvdW5kLWltYWdlOiB1cmwoLy9ldWltLm1zdGFyLmNvbS9JbWFnZXMvY291bnRyeUltZy9GbGFnc19hbGxfc21hbGwucG5nKTtiYWNrZ3JvdW5kLXBvc2l0aW9uOiAtMjg2cHggLTc3cHg7YmFja2dyb3VuZC1zaXplOiAxNDAwJTsiPjwvZGl2PjwvYT48L2xpPg0KICAgICAgPC91bD4NCiAgICA8L2Rpdj4NCiAgICA8ZGl2IHN0eWxlPSJiYWNrZ3JvdWQtY29sb3I6I2U4ZThlODtoZWlnaHQ6MTAlIj48L2Rpdj4NCiAgPC9kaXY+DQogIDxkaXYgY2xhc3M9Im1kcy1tb2RhbCBtZHMtbW9kYWwtLXN0YXRpYyIgdGFiaW5kZXg9Ii0xIiBzdHlsZT0iZGlzcGxheTogbm9uZSI+PHNlY3Rpb24gcm9sZT0iZGlhbG9nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlLW1vZGFsLTEiIGNsYXNzPSJtZHMtbW9kYWxfX2NvbnRhaW5lciIgZGF0YS1pZD0ibW9kYWwtYWRDaG9pY2UiIGFyaWEtaGlkZGVuPSJ0cnVlIiBkYXRhLW1kcy1tb2RhbC1zaXplPSJtIiBkYXRhLW1kcy1tb2RhbC1wcmltYXJ5PSJmYWxzZSI+PGRpdiBjbGFzcz0ibWRzLW1vZGFsX19pbm5lciI+PGhlYWRlciBjbGFzcz0ibWRzLW1vZGFsX19oZWFkZXIiPjxkaXYgY2xhc3M9Im1kcy1tb2RhbF9fYWN0aW9ucyI+PGJ1dHRvbiBjbGFzcz0ibWRzLWJ1dHRvbiBtZHMtYnV0dG9uLS1pY29uLW9ubHkiIHR5cGU9ImJ1dHRvbiIgZGF0YS1tZHMtbW9kYWwtY2xvc2U9IiIgcm9sZT0iYnV0dG9uIj48c3ZnIGNsYXNzPSJtZHMtaWNvbiBtZHMtYnV0dG9uX19pY29uIG1kcy1idXR0b25fX2ljb24tLWxlZnQiPjxzeW1ib2wgdmlld0JveD0iMCAwIDIzMDAgMjMwMCIgaWQ9InJlbW92ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xOTkwLjUgMzg5LjVsLTgwLTgwLTc2MCA3NzAtNzYwLTc3MC04MCA4MCA3NzAgNzYwLTc3MCA3NjAgODAgODAgNzYw" />
+<input type="hidden" name="__VIEWSTATE15" id="__VIEWSTATE15" value="LTc3MCA3NjAgNzcwIDgwLTgwLTc3MC03NjB6IiAvPg0KICAgICAgICAgICAgICAgIDwvc3ltYm9sPjx1c2UgeGxpbms6aHJlZj0iI3JlbW92ZSI+PHRpdGxlPkNsb3NlPC90aXRsZT48L3VzZT48L3N2Zz48L2J1dHRvbj48L2Rpdj48c3BhbiBjbGFzcz0ibWRzLW1vZGFsX190aXRsZSIgaWQ9InRpdGxlLW1vZGFsLTEiPg0KICAgICAgICAgICAgICAgIENvb2tpZSBDb25zZW50DQogICAgICAgICAgICAgIDwvc3Bhbj48L2hlYWRlcj48L2Rpdj48L3NlY3Rpb24+PC9kaXY+DQogIDxkaXYgaWQ9ImRpYWxvZy1ib3R0b20tY29udGVudCIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6I2U4ZThlODtmb250LXNpemU6MTVweDtsaW5lLWhlaWdodDoyIj48L2Rpdj4NCjwvZGl2PjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICAgIHZhciBtb2RhbFRyaWdnZXJzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnW2RhdGEtbWRzLW1vZGFsLWlkXScpOwoKICAgICAgICAgIGZvcih2YXIgaSA9IDA7IGkgPCBtb2RhbFRyaWdnZXJzLmxlbmd0aDsgaSsrKSB7CgkgICAgICAgCW1vZGFsVHJpZ2dlcnNbaV0ub25jbGljayA9IGZ1bmN0aW9uKCkgewoJCSAgICAJdmFyIG1vZGFsSWQgPSB0aGlzLmdldEF0dHJpYnV0ZSgnZGF0YS1tZHMtbW9kYWwtaWQnKTsKICAgICAgICAgICAgTURTLm1vZGFsKG1vZGFsSWQpO30KCSAgICAgICB9OwoKICAgIDwvc2NyaXB0PjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICAgIHZhciBkYXRhR3JvdXA9J2dyb3Vwb25lJzsKCiAgICAgIHZhciBTdWJtaXQgPSBmdW5jdGlvbigpCiAgICAgIHsKICAgICAgdmFyIHVybD0kKCIjdXNlcnR5cGUgaW5wdXQ6Y2hlY2tlZCIpLmF0dHIoImlkIik7CiAgICAgIGlmICh0eXBlb2YodXJsKSA9PSAidW5kZWZpbmVkIikKICAgICAgewogICAgICAkKCIjY2hvb3Nlbm90aWNlIikuc2hvdygpOwogICAgICByZXR1cm4gZmFsc2U7CiAgICAgIH0KICAgICAgdmFyIGVuYWJsZUludmVzdG1lbnRJblVLVmFsPTA7CiAgICAgIGlmKCQoJyNlbmFibGVJbnZlc3RtZW50SW5VSycpLmxlbmd0aCE9MCkKICAgICAgewogICAgICBlbmFibGVJbnZlc3RtZW50SW5VS1ZhbD0kKCcjZW5hYmxlSW52ZXN0bWVudEluVUsnKS5pcygnOmNoZWNrZWQnKT8xOjI7CiAgICAgIH0KICAgICAgdmFyIHJlcXVlc3RVcmw7CiAgICAgIGlmKCQoJyNyZW1lbWJlcicpLmlzKCc6Y2hlY2tlZCcpKQogICAgICB7CiAgICAgIHJlcXVlc3RVcmwgPSB1cmwgKyAiJmlmUmVtZW1iZXI9IiArIDEKICAgICAgKyImZW5hYmxlSW52ZXN0bWVudEluVUs9IiArIGVuYWJsZUludmVzdG1lbnRJblVLVmFsCiAgICAgIH0KICAgICAgZWxzZQogICAgICB7CiAgICAgIHJlcXVlc3RVcmwgPSB1cmwgKyAiJmlmUmVtZW1iZXI9IiArIDAKICAgICAgKyImZW5hYmxl" />
+<input type="hidden" name="__VIEWSTATE16" id="__VIEWSTATE16" value="SW52ZXN0bWVudEluVUs9IiArIGVuYWJsZUludmVzdG1lbnRJblVLVmFsCiAgICAgIH0KICAgICAgJC5nZXQocmVxdWVzdFVybCxmdW5jdGlvbihkYXRhLHN0YXR1cyl7CiAgICAgIGlmKHN0YXR1cz0ic3VjY2VzcyIpCiAgICAgIHsKICAgICAgdHJ5IHsKICAgICAgX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnQXVkaWVuY2UgSWRlbnRpZmljYXRpb24gUG9wLXVwJywgJ0F1ZGllbmNlIFR5cGUgY2hvb3NlbiAtLS0gJyArIGRhdGFdKTsKICAgICAgZ2EoJ2d0bUludGwuc2VuZCcsICdldmVudCcsICAnQXVkaWVuY2UgSWRlbnRpZmljYXRpb24gUG9wLXVwJywgJ0F1ZGllbmNlIFR5cGUgY2hvb3NlbiAtLS0gJyArIGRhdGEpOwogICAgICB9IGNhdGNoIHsgfQogICAgICBjb25zb2xlLmxvZyhkYXRhKTsKCiAgICAgIAogICAgICB2YXIgY3VycmVudHNpdGU9ImNhIjsKICAgICAgaWYoY3VycmVudHNpdGU9PSJpZSIgJiYgdXJsLmluZGV4T2YoInR5cGU9NiIpIT09IC0xKXsKICAgICAgd2luZG93LmxvY2F0aW9uLnJlcGxhY2UoImh0dHBzOi8vd3d3Lm1vcm5pbmdzdGFyZnVuZHMuaWUvaWUvdG9waWNzLzE5Nzc1My9wcm9mZXNzaW9uYWxpbnZlc3RvcnMuYXNweCIpOwogICAgICB9CiAgICAgIGVsc2V7CiAgICAgIHdpbmRvdy5sb2NhdGlvbi5yZWxvYWQoKX19CiAgICAgIH0pOwogICAgICB9CgogICAgICAkKGZ1bmN0aW9uICgpCiAgICAgIHsKICAgICAgdmFyIGN1cnJlbnRzaXRlPSJjYSI7CiAgICAgIGlmKGN1cnJlbnRzaXRlPT0ic2UiKQogICAgICB7CiAgICAgICQoIiNpbnZlc3RvclR5cGVOb3RlIikuY3NzKCd3aWR0aCcsJzQwMHB4JykKICAgICAgfQoKICAgICAgJCgiI2NvdXRyeWRyb3BsaXN0IikuY2hhbmdlKGZ1bmN0aW9uKCkKICAgICAgewogICAgICB2YXIgZ3JvdXA9JCgic2VsZWN0IG9wdGlvbjpzZWxlY3RlZCIpLmF0dHIoJ2RhdGFncm91cCcpOwogICAgICBpZiAodHlwZW9mKGdyb3VwKSAhPSAidW5kZWZpbmVkIikKICAgICAgewogICAgICAkKCIjIitkYXRhR3JvdXApLmNzcygnZGlzcGxheScsJ25vbmUnKTsKICAgICAgJCgiIyIrZ3JvdXApLmNzcygnZGlzcGxheScsJ2Jsb2NrJyk7CiAgICAgIGRhdGFHcm91cD1ncm91cDsKICAgICAgdmFyIHNpdGVhZGRyZXNzPSQoInNlbGVjdCBvcHRpb246c2VsZWN0ZWQiKS5hdHRyKCdzaXRlJyk7CiAgICAgIGlmICh0eXBlb2Yoc2l0ZWFkZHJlc3MpICE9ICJ1bmRlZmluZWQiKQogICAgICB7CiAgICAgIHdpbmRvdy5vcGVuKHNpdGVhZGRyZXNzKTsKICAgICAgfQogICAgICB9CiAgICAgIH0KICAgICAgKS50cmlnZ2VyKCAiY2hhbmdlIiApOwogICAgICB9KQogICAgPC9zY3JpcHQ+ZAIFDxYCHgVzdHlsZQUNZGlzcGxheTpub25lO2RkCGbEqeXkXVb758gNokm7jo7kvsqjwTGSTuBoNWXfYc4=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=SF8UyghDHDqTdasqnNs8p1BDiBtyifCOwMfn3tKVDtjabgfFSspmq1hR_SGLHWGkvyQK2mQSmIGhOdlIRLIrnpZXimCmTc39OZtrzW4DdsM1&amp;t=638449837832692113" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=HAlr1aA_T2cFv-bZvijLncyFIYwRP7IO5AoXpxeB0eKnmXpdXWw1ViEjcqVN4B2NqvZcNAebwwvrA4NFaujWHr6gUdRDvGFpDN9C4CmL9keRTqXBZMZBbHKwJhK7uA3VJvH5e2DN5-2w79UPDS2ev7ZgwXJD8En7n5ZDlRhTuqQ1&amp;t=3cf0aaa4" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=ysZGL6zxWKE9r-gdxoIR7ZRpK4dYZJZGEniSugo3J9lecrHv16eaZMEdN554NufPYCZFOw28FlEtSx7E2eeOBOjS_IxbKG_JvEQUWeIo4wKKVBpvFys9lY2R7YXOdkwlqHI3BMkVrFzWePjK2YskmgiKFcLfmwKakEkhOCNGayzPUm4rD5DP-cG_JOyjBmmK0&amp;t=3cf0aaa4" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CB01C49F" />
+</div>
+                    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+                    
+
+                    <div id="ctl00__columns__col1" class="column">
+	<div class='clearfix box double-width component'>
+
+<div id="cmsgoLineupArticlesLeftColumn_lineup" class="lineUpDivSign">
+	<div class="clearfix newsItemRow">
+		<div class="headlineFirstDark topBoxLine">
+			<a class="headlineFirst" href="https://www.morningstar.ca/ca/news/249580/3-fnb-solides-qui-d%c3%a9marrent-lentement-en-2024.aspx" target="_self" style="float:none">3 FNB solides qui démarrent lentement en 2024</a><div style="display:block; padding:10px 0">
+				<a target="_self"><img style='border-width: 0px;' src='https://images.contentstack.io/v3/assets/blt4eb669caa7dc65b2/blt96b435c5f92de52e/65b3ddf3d2067b38048c40ed/Rocket_through_a_pie_chart1.jpg' alt='Une fus&eacute;e qui passe au travers d&#39;un graphique'></img></a>
+			</div><div class="middeckFirst">
+				De bons FNB couvrant les mauvais segments du march&eacute; : ces m&eacute;daill&eacute;s sont pr&ecirc;ts &agrave; rebondir.<div class="bulletPanel">
+
+				</div>
+			</div>
+		</div>
+	</div><div id="TopLeftAD" class="advert box double-width automaticStretch-ad-lefttop">
+		
+              <script type='text/javascript'>WebAdsWriteTag('', '','TopLeft');</script>
+              <script type='text/javascript'>
+                var adelementlLefttop=$('.automaticStretch-ad-lefttop img');
+                if(adelementlLefttop.length!=0&&adelementlLefttop.attr('src').indexOf('empty.gif')>-1)
+                {
+                $('.automaticStretch-ad-lefttop').css({display:'none'});
+                }
+              </script>
+	</div><div class="clearfix newsItemRow">
+		<div class="headlineFirstDark">
+			<img class="articleImage" src="https://www.morningstar.co.uk/static/UploadManager/Assets/hermes-rivera-ahHn48-zKWo-unsplash-Canadianflag.jpg" alt="Drapeau canadien" style="border-width:0px;" /><a class="headlineFirst" href="https://www.morningstar.ca/ca/news/249546/un-fonds-canadien-constant-%c3%a0-toute-saison.aspx" target="_self" style="float:none">Un fonds canadien constant à toute saison</a><div class="middeckFirst">
+				Ce fonds est la seule strat&eacute;gie d'actions ax&eacute;e sur le Canada &agrave; avoir constamment battu la cat&eacute;gorie au cours des cinq derni&egrave;res ann&eacute;es.<div class="bulletPanel">
+
+				</div>
+			</div>
+		</div>
+	</div><div class="clearfix newsItemRow">
+		<div class="headlineFirstDark">
+			<img class="articleImage" src="https://www.morningstar.co.uk/static/UploadManager/Assets/Train%20engineer%20-%20AP.jpg" alt="Un conducteur de train qui conduit un train dans un tunnel" style="border-width:0px;" /><a class="headlineFirst" href="https://www.morningstar.ca/ca/news/249127/les-actions-dinfrastructure-pr%c3%a9sentent-un-fort-potentiel-de-hausse.aspx" target="_self" style="float:none">Les actions d'infrastructure présentent un fort potentiel de hausse</a><div class="middeckFirst">
+				Les grandes actions d&eacute;fensives ont &eacute;t&eacute; frein&eacute;es par les taux d'int&eacute;r&ecirc;t &eacute;lev&eacute;s, mais cela pourrait &ecirc;tre sur le point de changer, selon ce gestionnaire de fonds d&rsquo;infrastructure m&eacute;daill&eacute;.<div class="bulletPanel">
+
+				</div>
+			</div>
+		</div>
+	</div><div class="clearfix moreRow">
+		<a class="F10" href="https://www.morningstar.ca/ca/news/archive.aspx">Articles suivants...</a>
+	</div>
+</div></div><div class='clearfix boxTopBorder double-width component'><div id="CEFArticles_header" class="clearfix">
+	<div id="CEFArticles_title" style="float:left;" class="headlineRSSRow">		
+		<h2>Finances Personnelles</h2>
+	</div>
+	<div style="float:right;">
+		
+	</div>
+</div>
+
+<div id="CEFArticles_lineup" class="lineUpDivSign">
+	<div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249525/laugmentation-de-limp%c3%b4t-sur-les-gains-en-capital-au-canada--faut-il-vendre-des-actifs-maintenant-.aspx" target="_self">L'augmentation de l'impôt sur les gains en capital au Canada : faut-il vendre des actifs maintenant ?</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249132/comment-r%c3%a9duire-sa-dette-au-canada.aspx" target="_self">Comment réduire sa dette au Canada</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249048/comment-%c3%a9tablir-un-budget-au-canada-dans-un-contexte-dincertitude-%c3%a9conomique-.aspx" target="_self">Comment établir un budget au Canada dans un contexte d'incertitude économique ?</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/248830/faites-ce-que-je-dis-(pas-ce-que-je-fais).aspx" target="_self">Faites ce que je dis (pas ce que je fais)</a>
+	</div><div class="clearfix moreRow">
+		<a class="F10" href="https://www.morningstar.ca/ca/collection/29214/finances-personnelles.aspx">Articles suivants...</a>
+	</div>
+</div></div><div class='clearfix advert box double-width automaticStretch-ad-leftbottom component'><div id="_literalHtml" class="clearfix">
+	
+    
+<script type="text/javascript">WebAdsWriteTag('', '','BottomLeft');</script>
+<script type="text/javascript">
+            var adelementlLeftbottom=$('.automaticStretch-ad-leftbottom #_literalHtml img');
+            if(adelementlLeftbottom.length!=0&&adelementlLeftbottom.attr('src').indexOf('empty.gif')>-1)
+            {
+            $('.automaticStretch-ad-leftbottom').css({display:'none'});
+            }
+          </script>
+</div></div><div class='clearfix boxTopBorder double-width component'><div id="EquityArticles_header" class="clearfix">
+	<div id="EquityArticles_title" style="float:left;" class="headlineRSSRow">		
+		<h2>Perspectives Actions</h2>
+	</div>
+	<div style="float:right;">
+		
+	</div>
+</div>
+
+<div id="EquityArticles_lineup" class="lineUpDivSign">
+	<div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249574/cest-le-temps-dinvestir-dans-les-titres-%c2%ab-mal-aim%c3%a9s-et-sous-%c3%a9valu%c3%a9s-%c2%bb.aspx" target="_self">C'est le temps d'investir dans les titres « mal-aimés et sous-évalués »</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249009/4-actions-du-secteur-des-services-publics-pour-profiter-de-lessor-des-centres-de-donn%c3%a9es-dia.aspx" target="_self">4 actions du secteur des services publics pour profiter de l'essor des centres de données d'IA</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/248898/le-cuivre-entre-t-il-dans-un-nouveau-supercycle-.aspx" target="_self">Le cuivre entre-t-il dans un nouveau supercycle ?</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249126/3-actions-%c3%a0-rendement-%c3%a9lev%c3%a9-que-warren-buffett-appr%c3%a9cie.aspx" target="_self">3 actions à rendement élevé que Warren Buffett apprécie</a>
+	</div><div class="clearfix moreRow">
+		<a class="F10" href="https://www.morningstar.ca/ca/collection/29208/marchc3a9s.aspx">Articles suivants...</a>
+	</div>
+</div></div><div class='clearfix boxTopBorder double-width component'><div id="PortfolioArticles_header" class="clearfix">
+	<div id="PortfolioArticles_title" style="float:left;" class="headlineRSSRow">		
+		<h2>Perspectives Fonds</h2>
+	</div>
+	<div style="float:right;">
+		
+	</div>
+</div>
+
+<div id="PortfolioArticles_lineup" class="lineUpDivSign">
+	<div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249546/un-fonds-canadien-constant-%c3%a0-toute-saison.aspx" target="_self">Un fonds canadien constant à toute saison</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249127/les-actions-dinfrastructure-pr%c3%a9sentent-un-fort-potentiel-de-hausse.aspx" target="_self">Les actions d'infrastructure présentent un fort potentiel de hausse</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/248894/ce-fonds-canadien-prone-une-approche-patiente-et-de-qualit%c3%a9-ax%c3%a9e-sur-la-croissance-mondiale.aspx" target="_self">Ce fonds canadien prone une approche patiente et de qualité axée sur la croissance mondiale</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/248831/y-aura-t-il-un-atterrissage-.aspx" target="_self">Y-aura-t-il un atterrissage ?</a>
+	</div><div class="clearfix moreRow">
+		<a class="F10" href="https://www.morningstar.ca/ca/collection/29115/nouvelles-fonds.aspx">Articles suivants...</a>
+	</div>
+</div></div>
+</div><div id="ctl00__columns__col2" class="column">
+	<div class='clearfix box double-width component'>
+
+<div id="cmsgoLineupArticlesMiddleAbove_lineup" class="lineUpDivSign">
+	<div class="clearfix newsItemRow">
+		<div class="headlineFirstDark topBoxLine">
+			<img class="articleImage" src="https://www.morningstar.co.uk/static/UploadManager/Assets/Stock%20pickers-investing-AP.jpg" alt="Un groupe de gestionnaires qui examinent des graphiques boursiers" style="border-width:0px;" /><a class="headlineFirst" href="https://www.morningstar.ca/ca/news/249574/cest-le-temps-dinvestir-dans-les-titres-%c2%ab-mal-aim%c3%a9s-et-sous-%c3%a9valu%c3%a9s-%c2%bb.aspx" target="_self" style="float:none">C'est le temps d'investir dans les titres « mal-aimés et sous-évalués »</a><div class="middeckFirst">
+				M&ecirc;me apr&egrave;s les r&eacute;cents sommets historiques, ces gestionnaires affirment que les march&eacute;s boursiers canadiens et am&eacute;ricains semblent encore bon march&eacute;, mais pas dans les domaines habituels de la croissance et de la technologie.<div class="bulletPanel">
+
+				</div>
+			</div>
+		</div>
+	</div><div class="clearfix newsItemRow">
+		<div class="headlineFirstDark">
+			<img class="articleImage" src="https://morningstar-morningstar-prod.web.arc-cdn.net/resizer/6Xs19oyqcJE_nFk7r97R1TiT7qo=/1600x0/filters:no_upscale():quality(80)/cloudfront-us-east-1.images.arcpublishing.com/morningstar/U746MWXQHFFZPLSMTEJSUD7HLY.png" alt="Graphique du secteur des services publics repr&amp;eacute;sentant une &amp;eacute;olienne et une ampoule &amp;eacute;lectrique" style="border-width:0px;" /><a class="headlineFirst" href="https://www.morningstar.ca/ca/news/249009/4-actions-du-secteur-des-services-publics-pour-profiter-de-lessor-des-centres-de-donn%c3%a9es-dia.aspx" target="_self" style="float:none">4 actions du secteur des services publics pour profiter de l'essor des centres de données d'IA</a><div class="middeckFirst">
+				Les actions versant des dividendes qui desservent ces r&eacute;seaux sont parmi les mieux plac&eacute;es pour faire face &agrave; l'augmentation de la demande d'&eacute;lectricit&eacute;.<div class="bulletPanel">
+
+				</div>
+			</div>
+		</div>
+	</div><div class="clearfix newsItemRow">
+		<div class="headlineFirstDark">
+			<img class="articleImage" src="https://www.morningstar.co.uk/static/UploadManager/Assets/greg-rosenke-GOWz0zTf_vY-unsplash-globalfund-canada.jpg" alt="Person holding a glowing globe" style="border-width:0px;" /><a class="headlineFirst" href="https://www.morningstar.ca/ca/news/248894/ce-fonds-canadien-prone-une-approche-patiente-et-de-qualit%c3%a9-ax%c3%a9e-sur-la-croissance-mondiale.aspx" target="_self" style="float:none">Ce fonds canadien prone une approche patiente et de qualité axée sur la croissance mondiale</a><div class="middeckFirst">
+				La strat&eacute;gie concentr&eacute;e d'actions mondiales de BMO, m&eacute;daill&eacute;e Or, continue d'avoir une longueur d'avance, gr&acirc;ce &agrave; un processus ascendant de plus en plus rigoureux.<div class="bulletPanel">
+
+				</div>
+			</div>
+		</div>
+	</div><div class="clearfix moreRow">
+		<a class="F10" href="https://www.morningstar.ca/ca/news/archive.aspx">Articles suivants...</a>
+	</div>
+</div></div><div class='clearfix box boxTopBorder double-width component'><div id="cmsgoLineupArticlesMiddleBelow_header" class="clearfix">
+	<div id="cmsgoLineupArticlesMiddleBelow_title" style="float:left;" class="headlineRSSRow">		
+		<h2><img style="float: left; width:30px; height:30px" alt="Meilleurs Placements" src="https://www.morningstar.co.uk/static/UploadManager/Image/search_list_icon.png"> Meilleures Idées</h2>
+	</div>
+	<div style="float:right;">
+		
+	</div>
+</div>
+
+<div id="cmsgoLineupArticlesMiddleBelow_lineup" class="lineUpDivSign">
+	<div class="clearfix newsItemRow">
+		<div class="headlineFirstDark">
+			<img class="articleImage" src="https://www.morningstar.co.uk/static/UploadManager/Image/indexes_icon_80x80.png" alt="Un graphique montrant deux courbes noires sur fond blanc" style="border-width:0px;" /><a class="headlineFirst" href="https://www.morningstar.ca/ca/screener/index.aspx#?filtersSelectedValue={&quot;term&quot;:&quot;CAN&quot;}&amp;page=1&amp;perPage=10&amp;sortField=legalName&amp;sortOrder=asc&amp;universeId=IXMSX$$ALL" target="_self" style="float:none">Indices Morningstar</a><div class="middeckFirst">
+				Les indices Morningstar sont conçus pour guider les investisseurs
+			</div>
+		</div>
+	</div><div class="clearfix newsItemRow">
+		<div class="headlineFirstDark">
+			<img class="articleImage" src="https://www.morningstar.co.uk/static/UploadManager/Image/shield_icon_80x80.png" alt="&amp;Eacute;toile au contour noir dans un bouclier au contour noir" style="border-width:0px;" /><a class="headlineFirst" href="https://www.morningstar.ca/ca/screener/fund.aspx#?filtersSelectedValue={&quot;medalist_RatingNumber&quot;:{&quot;id&quot;:&quot;7&quot;}}&amp;page=1&amp;sortField=legalName&amp;sortOrder=asc" target="_self" style="float:none">Fonds médaillés Or</a><div class="middeckFirst">
+				Ces fonds reçoivent les meilleures cotes : Or, Argent ou Bronze.
+			</div>
+		</div>
+	</div><div class="clearfix newsItemRow">
+		<div class="headlineFirstDark">
+			<img class="articleImage" src="https://www.morningstar.co.uk/static/UploadManager/Image/star_rating_icon_80x80.png" alt="&amp;Eacute;toile au contour noir sur fond blanc" style="border-width:0px;" /><a class="headlineFirst" href="http://www.morningstar.ca/ca/screener/stock.aspx#?filtersSelectedValue={&quot;starRating&quot;:{&quot;id&quot;:&quot;5&quot;},&quot;analystRatingScale&quot;:{&quot;id&quot;:&quot;5&quot;}}&amp;page=1&amp;perPage=10&amp;sortField=legalName&amp;sortOrder=asc&amp;universeId=FOCAN$$ALL" target="_self" style="float:none">Actions cinq étoiles</a><div class="middeckFirst">
+				Selon les cotes quantitatives de Morningstar, ces actions ont tout pour être performantes à long terme.
+			</div>
+		</div>
+	</div><div class="clearfix newsItemRow">
+		<div class="headlineFirstDark">
+			<img class="articleImage" src="https://www.morningstar.co.uk/static/UploadManager/Image/leaf_icon_80x80.png" alt="Tige avec deux feuilles au contour noir sur fond blanc" style="border-width:0px;" /><a class="headlineFirst" href="https://www.morningstar.ca/ca/funds/esg.aspx?lang=fr-CA" target="_self" style="float:none">Fonds durables</a><div class="middeckFirst">
+				Les fonds durables les mieux cotés par Morningstar.
+			</div>
+		</div>
+	</div>
+</div></div><div class='clearfix boxTopBorder double-width component'><div id="_qualRatingsDiv" class="clearfix">
+	
+    
+    <table id="_qualRatings" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">
+		<tr>
+			<th><a href="/ca/research/default.aspx" style="color:#333333;">Dernières mises à jour</a></th><th colspan="2">Cote<br/> Morningstar</th>
+		</tr><tr>
+			<td class="qualRatingCells qualRatingCellsFirst qualTitleCol"><a title="Capital Group Global Balanced Fund (Canada) Series A" class="qualRatingLinks" href="/ca/report/fund/performance.aspx?t=F00000W8TH&amp;fundservcode=&amp;lang=fr-CA&amp;isreport=true">Capital Group Global Balanced Fund...</a></td><td class="qualRatingCells qualRatingCellsFirst label QualitativeCol"><span>Fonds</span></td><td class="qualRatingCells qualRatingCellsFirst label QualitativeCol"><div class="rating_sprite medalist-rating-4"></div></td>
+		</tr><tr>
+			<td class="qualRatingCells qualTitleCol"><a title="Starlight Global Growth Fund Series A" class="qualRatingLinks" href="/ca/report/fund/performance.aspx?t=F0CAN05P8V&amp;fundservcode=&amp;lang=fr-CA&amp;isreport=true">Starlight Global Growth Fund Serie...</a></td><td class="qualRatingCells label QualitativeCol"><span>Fonds</span></td><td class="qualRatingCells label QualitativeCol"><div class="rating_sprite medalist-rating-4"></div></td>
+		</tr><tr>
+			<td class="qualRatingCells qualTitleCol"><a title="Invesco EQV European Equity Class" class="qualRatingLinks" href="/ca/report/fund/performance.aspx?t=F0CAN05NAZ&amp;fundservcode=&amp;lang=fr-CA&amp;isreport=true">Invesco EQV European Equity Class</a></td><td class="qualRatingCells label QualitativeCol"><span>Fonds</span></td><td class="qualRatingCells label QualitativeCol"><div class="rating_sprite medalist-rating-4"></div></td>
+		</tr><tr>
+			<td class="qualRatingCells qualTitleCol"><a title="BMO Asian Growth &amp; Income A" class="qualRatingLinks" href="/ca/report/fund/performance.aspx?t=F00000O5FX&amp;fundservcode=&amp;lang=fr-CA&amp;isreport=true">BMO Asian Growth & Income A</a></td><td class="qualRatingCells label QualitativeCol"><span>Fonds</span></td><td class="qualRatingCells label QualitativeCol"><div class="rating_sprite medalist-rating-4"></div></td>
+		</tr><tr>
+			<td class="qualRatingCells qualTitleCol"><a title="TD US Small Cap Equity - D" class="qualRatingLinks" href="/ca/report/fund/performance.aspx?t=F00000VBEP&amp;fundservcode=&amp;lang=fr-CA&amp;isreport=true">TD US Small Cap Equity - D</a></td><td class="qualRatingCells label QualitativeCol"><span>Fonds</span></td><td class="qualRatingCells label QualitativeCol"><div class="rating_sprite medalist-rating-4"></div></td>
+		</tr><tr>
+			<td class="qualRatingCells qualTitleCol"><a title="Verbund AG Class A" class="qualRatingLinks" href="/ca/report/stocks/analysis.aspx?t=0P0000DLBX&amp;lang=fr-CA&amp;isreport=true">Verbund AG Class A</a></td><td class="qualRatingCells label QualitativeCol"><span>Action</span></td><td class="qualRatingCells label QualitativeCol"><img title="Assessment of a funds past performance-both return and risk" src="/includes/images/3stars.gif" style="border-width:0px;" /></td>
+		</tr><tr>
+			<td colspan="3"><a class="qualRatingLinks qualRatingLinksMore" href="/ca/research/default.aspx">Cliquez ici pour d'autres recherches de Morningstar</a></td>
+		</tr><tr>
+			<td class="qualRatingDisclosure" colspan="3">Divulgations importantes sur les cotes Morningstar ci-dessous</td>
+		</tr>
+	</table>
+
+</div></div><div class='clearfix box boxTopBorder double-width component'><div id="homePageMiddleColumnBottom_header" class="clearfix">
+	<div id="homePageMiddleColumnBottom_title" style="float:left;" class="headlineRSSRow">		
+		<h2>Aux dernières nouvelles</h2>
+	</div>
+	<div style="float:right;">
+		
+	</div>
+</div>
+
+<div id="homePageMiddleColumnBottom_lineup" class="lineUpDivSign">
+	<div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249580/3-fnb-solides-qui-d%c3%a9marrent-lentement-en-2024.aspx" target="_self">3 FNB solides qui démarrent lentement en 2024</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249546/un-fonds-canadien-constant-%c3%a0-toute-saison.aspx" target="_self">Un fonds canadien constant à toute saison</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249574/cest-le-temps-dinvestir-dans-les-titres-%c2%ab-mal-aim%c3%a9s-et-sous-%c3%a9valu%c3%a9s-%c2%bb.aspx" target="_self">C'est le temps d'investir dans les titres « mal-aimés et sous-évalués »</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249127/les-actions-dinfrastructure-pr%c3%a9sentent-un-fort-potentiel-de-hausse.aspx" target="_self">Les actions d'infrastructure présentent un fort potentiel de hausse</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249525/laugmentation-de-limp%c3%b4t-sur-les-gains-en-capital-au-canada--faut-il-vendre-des-actifs-maintenant-.aspx" target="_self">L'augmentation de l'impôt sur les gains en capital au Canada : faut-il vendre des actifs maintenant ?</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249132/comment-r%c3%a9duire-sa-dette-au-canada.aspx" target="_self">Comment réduire sa dette au Canada</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249048/comment-%c3%a9tablir-un-budget-au-canada-dans-un-contexte-dincertitude-%c3%a9conomique-.aspx" target="_self">Comment établir un budget au Canada dans un contexte d'incertitude économique ?</a>
+	</div><div class="clearfix newsItemRow1">
+		<a class="headline1" href="https://www.morningstar.ca/ca/news/249009/4-actions-du-secteur-des-services-publics-pour-profiter-de-lessor-des-centres-de-donn%c3%a9es-dia.aspx" target="_self">4 actions du secteur des services publics pour profiter de l'essor des centres de données d'IA</a>
+	</div>
+</div></div>
+</div><div id="ctl00__columns__col3" class="column">
+	<div class='clearfix double-width up-margin component'><div id="_literalHtml" class="clearfix">
+	
+    
+<div>
+  <iframe title="GMB-Control" scrolling="no" src="/ca/Markets/gmb.aspx?showHeader=false&showDate=false&showTimePeriod=false&showInfo=false" class="gmbIframe"></iframe>
+  <a href="/ca/Markets/global-market-barometer.aspx" aria-hidden="true" target="_self" style="display:block; background-color:transparent; width:460px; height:350px; position:relative">GMB</a>
+</div>
+</div></div><div class='clearfix advert box double-width firstAd component'><div id="_literalHtml" class="clearfix">
+	
+    
+<script type="text/javascript">WebAdsWriteTag('300', '250','HomepageMPU');</script>
+</div></div><div class='clearfix box double-width component'><div id="_usMarketIndicies">
+	
+    <style type="text/css">
+        #marketindex iframe {
+            left: 0px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            border: none
+        }
+
+        .qs-marketindex {
+            background: #FDFDFD!important;
+        }
+    </style>
+    <script type="text/javascript" src="https://quotespeed.morningstar.com/apis/common/apimanager.js"></script>
+
+    <div id="US_component_data"></div>
+
+    <div id="header" class="clearfix">
+        <div id="title" style="float: left;">
+            <h2>Indices boursiers</h2>
+        </div>
+    </div>
+
+    <div id="marketindex"></div>
+    <script type="text/javascript">
+        //step1: define the onItemClick callback
+        var hostName = window.location.hostname;
+        var envVal = 'production';
+        var instid = 'EURTL';
+
+        if (["hk", "sg", "tw", "my"].some(el => 'ca'.includes(el))) {
+            instid = 'ASIA'
+        }
+        else if ('ca' == 'ca') {
+            instid = 'MSTRC'
+        }
+
+        if (hostName && ((hostName.indexOf("localhost") > -1) || (hostName.indexOf("eurtqa") > -1))) {
+            var envVal = 'uat';
+        }
+        else {
+            var envVal = 'production';
+        }
+
+        function onclickHandle(para) {
+        }
+
+        //step2: define the API page . It is required. here we suggest to use sso login instead of pass the account directly.
+        var url = 'https://quotespeed.morningstar.com/apis/api.jsp?instid=' + instid + '&module=market&submodule=marketindex';
+        url += '&lang=fr_ca';
+
+        //step3: define and add the proxy URL. it is required. “qsapi_proxy.html” will provide by Morningstar markets(Quotespeed).
+        var proxyurl = window.location.protocol + "//" + window.location.host + "/ca/QuoteSpeed/qsapi_proxy.aspx"; //you have created the save qsapi_proxy.html address
+
+        var mycars = ["fr", "uk", "it", "ca", "nl", "mx", "at", "be", "dk", "fi", "de", "no", "es", "ch","se","th","cl","hk","sg","tw","my"]
+        if (mycars.indexOf('ca') >= 0) {
+            console.info("CurrentSite is：" + 'ca');
+            url = 'http://quotespeed.morningstar.com/apis/api.jsp?instid=MSTRC&module=market&apiVersion=2&width=500&height=400&showTime=true&showCurrency=true&showRDUpdateLabel=false&context=Canada:ticker|111.10.MSCACADP-Morningstar%20Canada%20Index%20PR%20%7dCAD127.10.0000-S%26P%20TSX%20Comp%7d0P00008PAC-S%26P/TSX60%7d127.10.JX-TSX%20Venture,txt|Canada;Etats-Unis:ticker|%7d111.10.MSTAR-Morningstar%7d111.10.MSTAR-Morningstar%20US%20Market%20PR%20USD%7d30.10.!DJI-DJIA%7d33.10.!SPX-S%26P%20500%7d0P00001G7B-Nasdaq,txt|Etats-Unis;Asie-Pacifique:ticker|111.10.MSAUAUDP-Morningstar%20Australia%20Index%20PR%20AUD%7d0P00006NNM-Shanghai%7d132.10.100000018-Nikkei%20225%7d139.10.1-Bombay%7d146.10.XAO-Australie,txt|Asie-Pacifique;Europe:ticker|%7d111.10.MSGBGBPP-Morningstar%20UK%20Index%20PR%20GBP%7d111.10.MSEZEURP-Morningstar%20Eurozone%20PR%7d0P00001IS1-FTSE%20100%7d0P00008ICX-CAC40%20Paris%7d213.10.DAX-DAX%20Frankfurt%7d211.10.AEX-AEX%20Amstrdm%7d211.10.BEL20-BEL20%20Brussel%7d181.10.SMI-SMI%20Zurich,txt|Europe&menuList=Canada,Etats-Unis,Asie-Pacifique,Europe&showSymbolEllipsis=false&showUpperCaseAMPM=true&dateFormat=DD.MM.YYYY&timeFormat=hh:mm&showIntTime=false&showPlus=true&chartHeight=120&chartCfg=lineType:montain&lang=en_ca';
+            proxyurl = "";
+
+        }
+
+        $(document).ready(function () {
+            //$('#marketIndexQuestionMark').tooltip(
+            //    { selector: "[rel=tooltip]" }
+            //);
+
+            let authUrlTemplate = '/Markets/MarketAuthoritarian.ashx?env=' + envVal + '&instid=' + instid;
+
+            let authenticateAwsSso = function () {
+                return $.ajax(authUrlTemplate);
+
+            };
+            console.log(instid);
+            authenticateAwsSso().done(function (jsonData) {
+                let data = JSON.parse(jsonData);
+                if (data.attachment && data.attachment.SessionID) {
+                    //step4: init QSAPI and create Widget
+                    QSAPI.init ( instid,
+                        {
+                            env: envVal,
+                            sessionKey: data.attachment.SessionID
+                        },
+                        function (result) {
+                            QSAPI.createWidget(
+                                document.getElementById('marketindex'),
+                                url,
+                                {
+                                    fixHeight: false,
+                                    width: 380, //width is required height: 300 //init iframe width, it will be resize when widget loaded 
+                                },
+                                {
+                                    onClick: onclickHandle //add the onItemClick callback 
+                                });
+                        });
+
+                } else {
+                    console.log('MarketsApiToken authentication failed');
+                }
+            })
+        });
+    </script>
+
+</div>
+
+</div><div class='clearfix topBox component'><div id="_usCurrencyWidget">
+	
+    <style type="text/css">
+        #forexCurrencyWidget iframe {
+            left: 0px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            border: none;
+            padding-top: 5px;
+        }
+    </style>
+    <script type="text/javascript" src="https://quotespeed.morningstar.com/apis/common/apimanager.js"></script>
+
+    
+
+    <div id="forexCurrencyWidget"></div>
+    <script type="text/javascript">
+        var forexHostName = window.location.hostname;
+        var forexEnvVal = 'production';
+        var forexInstid = 'EURTL';
+
+        if (["hk", "sg", "tw", "my"].some(el => 'ca'.includes(el))) {
+            forexInstid = 'EURTL'
+        }
+        else if ('ca' == 'ca') {
+            forexInstid = 'MSTRC'
+        }
+
+        if (forexHostName && ((forexHostName.indexOf("localhost") > -1) || (forexHostName.indexOf("eurtqa") > -1))) {
+            forexEnvVal = 'uat';
+        }
+        else {
+            forexEnvVal = 'production';
+        }
+
+        var forexUrl = 'https://quotespeed.morningstar.com/apis/api.jsp?instid=' + forexInstid + '&module=forex&submodule=forexcrt&width=378&height=180&' +
+            'currencyList=CAD,USD,EUR,CNY&showHead=0&decimal=4' +
+            '&lang=fr_ca'
+
+        $(document).ready(function () {
+
+            let forexAuthUrlTemplate = '/Markets/MarketAuthoritarian.ashx?env=' + forexEnvVal + '&instid=' + forexInstid;
+
+            let forexAuthenticateAwsSso = function () {
+                return $.ajax(forexAuthUrlTemplate);
+
+            };
+
+            console.log(forexInstid);
+            forexAuthenticateAwsSso().done(function (jsonData) {
+                let forexData = JSON.parse(jsonData);
+                if (forexData.attachment && forexData.attachment.SessionID) {
+                    QSAPI.init(forexInstid,
+                        {
+                            env: forexEnvVal,
+                            sessionKey: forexData.attachment.SessionID
+                        },
+                        function (result) {
+                            QSAPI.createWidget(
+                                document.getElementById('forexCurrencyWidget'),
+                                forexUrl,
+                                {
+                                    fixHeight: false,
+                                    width: 380
+                                });
+                        });
+                } else {
+                    console.log('MarketsApiToken authentication failed');
+                }
+            })
+        });
+
+    </script>
+
+</div>
+
+</div><div class='clearfix advert box double-width secondAd component'><div id="_literalHtml" class="clearfix">
+	
+    
+<script type="text/javascript">WebAdsWriteTag('160', '600','NewBottomRight');</script>
+</div></div><div class="clearfix box double-width component">
+		
+
+
+<style>
+    #iSharesSignupWrapperEx {
+        border-radius: 10px;
+        background-color: #f2f2f2;
+        height: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        margin-top: 20px;
+        padding-top: 20px;
+        font-size: 16px !important;
+        min-height: 80px;
+    }
+
+    .ab23731c7ebc {
+        width: 340px;
+        border-top: solid 1px #eaeaea;
+        border-left: solid 1px #eaeaea;
+        border-bottom: solid 1px #d7d9da;
+        border-right: solid 1px #d7d9da;
+        height: 21px;
+        padding-top: 5px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .hideMsg {
+        display: none;
+    }
+
+    .showMsg {
+        display: block;
+    }
+
+    .ohnohoney {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0;
+        width: 0;
+        z-index: -1;
+    }
+</style>
+<script type="text/javascript">
+    let strEmail1;
+    function ClearEmailText(id) {
+        ClearSearchBox(id, 'Pour vous abonner, veuillez inscrire votre courriel ici.');
+    }
+    function submitSubscription() {
+
+        strEmail1 = $("#ab23731c7ebc").val();
+        strEmail0 = $("#EmailTextBox").val();
+        console.log(strEmail0);
+        if ($.trim(strEmail0).length > 0) {
+            return;
+        }
+        console.log(strEmail1);
+        if (strEmail1 == "" || $.trim(strEmail1).length == 0) {
+            console.log("1");
+            hideSuccessMsg();
+            showErrorMsg();
+            $("#errorMsg").text("Pour vous abonner, inscrivez votre courriel ici.");
+            return;
+        }
+        if (strEmail1.length < 5 || strEmail1.length > 50) {
+            console.log("2");
+            hideSuccessMsg();
+            showErrorMsg();
+            $("#errorMsg").text("L'adresse courriel doit comporter entre 5 et 50 caractères.");
+            return;
+        }
+
+        let reg = new RegExp(/^([a-zA-Z0-9._-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/);
+        if (!reg.test(strEmail1)) {
+            console.log("3");
+            hideSuccessMsg();
+            showErrorMsg();
+            $("#errorMsg").text("Courriel non valide");
+            return;
+        }
+        hideErrorMsg();
+        hideSuccessMsg();
+        $.ajax({
+            url: "../ca/Services/NewsLetterService.ashx",
+            data: {
+                "SubscriptionType": 'Editorial',
+                "EmailAddress": strEmail1,
+                "CurrentCountryId": 'CAN',
+                "CurrentLanguageId": 'fr-CA'
+            },
+            success: function (response) {
+                console.log(response);
+                if (response.toLowerCase() == "true") {
+                    console.log("Success");
+                    $("#SuccessMsg").text("Merci. Votre courriel a bien été pris enregistré.");
+                    showSuccessMsg();
+
+                    $("#ab23731c7ebc").remove();
+                    $("#btnSubscription").remove();
+                    try {
+                        ga('gtmIntl.send', 'event', 'Newsletter Subscription', 'CAN', 'Editorial');
+                    } catch { }
+                } else {
+                    console.log("Failed");
+                    $("#errorMsg").text("Échec");
+                    showErrorMsg();
+                }
+            },
+            error: function (xhr) {
+                $("#errorMsg").text(xhr);
+                showErrorMsg();
+                console.log(xhr);
+            }
+        });
+
+    }
+
+    function hideErrorMsg() {
+        $("#errorMsg").removeClass("hideMsg");
+        $("#errorMsg").removeClass("showMsg");
+        $("#errorMsg").addClass("hideMsg");
+    }
+
+    function showErrorMsg() {
+        $("#errorMsg").removeClass("hideMsg");
+        $("#errorMsg").removeClass("showMsg");
+        $("#errorMsg").addClass("showMsg");
+    }
+
+    function hideSuccessMsg() {
+        $("#SuccessMsg").removeClass("hideMsg");
+        $("#SuccessMsg").removeClass("showMsg");
+        $("#SuccessMsg").addClass("hideMsg");
+    }
+
+    function showSuccessMsg() {
+        $("#SuccessMsg").removeClass("hideMsg");
+        $("#SuccessMsg").removeClass("showMsg");
+        $("#SuccessMsg").addClass("showMsg");
+    }
+</script>
+
+<div id="iSharesSignupWrapperEx">
+    <label id="ab23731c7ebc_Label" for="ab23731c7ebc" />
+    <label id="EmailTextBox_Label" for="EmailTextBox" />
+    <div>Obtenez les dernières nouvelles et restez au fait des développements du marché avec le bulletin éditorial de Morningstar.</div>
+    <input id="ab23731c7ebc" type="text" class="ab23731c7ebc" placeholder="Pour vous abonner, veuillez inscrire votre courriel ici." value="Pour vous abonner, veuillez inscrire votre courriel ici." onclick="ClearEmailText(this.id)" />
+    <input id="EmailTextBox" class="ohnohoney" placeholder="Pour vous abonner, veuillez inscrire votre courriel ici." type="text" />
+    <div id="errorMsg" style="float: left; height: auto; width: auto; min-width: 300px; color: red;" class="hideMsg"></div>
+    <div id="SuccessMsg" style="float: left; height: auto; width: auto; min-width: 300px; font-weight: 600; margin-top: 10px; color: red;" class="hideMsg"></div>
+
+    <input id="btnSubscription" style="margin-top: 10px;" type="button" onclick="submitSubscription()" class="mds-button mds-button--primary" value="Envoyer" />
+</div>
+
+
+
+
+	</div>
+</div>
+                </form>
+            </div>
+        </div>
+
+        
+
+<style>
+    .f_text4_red, a.f_text4_red:hover {
+        color: #E00000 !important;
+    }
+
+    .f_Links_row1 {
+        font-weight: bold;
+        padding-left: 3px;
+        margin-left: 3px;
+    }
+
+    .f_Links_2 {
+        padding: 9px 0;
+    }
+
+    .f_Links_row2 {
+        margin-bottom: 9px;
+    }
+
+    #_disclaimerDiv {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .NewFooter_Group_Div {
+        margin: 0 40px 0 0
+    }
+
+    .NewFooter_Group_Header {
+        text-transform: uppercase;
+        letter-spacing: 1.67px;
+        padding: 0;
+        margin: 0 0 10px 0;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    .NewFooter_Group_Text {
+        font-size: 14px !important;
+        font-weight: 300 !important;
+    }
+
+    .NewFooter_Group_link {
+        border-bottom: 1px solid #e5e5e5;
+        text-decoration: none !important;
+        font-size: 14px !important;
+        cursor: pointer;
+    }
+
+    .NewFooter_Group_Line1 {
+        display: flex;
+        margin-bottom: 10px;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-content: flex-start;
+    }
+
+    .NewFooter_Group_Group1 {
+        display: flex;
+        width: auto;
+    }
+
+    .NewFooter_Group {
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+
+    .sharedButtonGroupStyle {
+        display: flex;
+        margin: 20px 0 0 0;
+    }
+
+    .sharedButtonItemStyle {
+        margin-right: 12px;
+    }
+
+    @media screen and (max-width: 780px) {
+        .NewFooter_Group_Line1 {
+            display: block;
+        }
+
+        .NewFooter_Group_Group1 {
+            display: block;
+            width: 100%;
+        }
+
+        .NewFooter_Group_Div {
+            margin: 20px 40px 0 0;
+        }
+
+        .NewFooter_Group, .copyrightfooter {
+            margin-left: 10px
+        }
+    }
+</style>
+
+<div id="LayerFooter" class="clearfix">
+	
+    <div id="footer_ads" class="f_Ads">
+        <div class="f_Ads_row1">
+            <script type="text/javascript">
+                var ad_footer_secId = '';
+                //[EURET-3979]
+                if (typeof master_SecID != 'undefined') {
+                    ad_footer_secId = master_SecID;
+                }
+                else {
+                    ad_footer_secId = '';
+                }
+                function InitFooterAd1ForSync(pgId) {
+                    return WebAdsWriteTagSponsorForSync('728', '110', 'BottomLeaderboard', pgId, ad_footer_secId);
+                }
+                function InitFooterAd1() {
+                    WebAdsWriteTagSponsor('728', '110', 'BottomLeaderboard', ad_footer_secId);
+                }
+                function InitFooterAd1ForSyncNoPgid() {
+                    return WebAdsWriteTagForSyncNoPgid('728', '110', 'BottomLeaderboard', ad_footer_secId);
+                }
+                //[EURET-3979]
+                function InitFooterAd1ForSalreport() {
+                    return WebAdsWriteTagForSalReport('BottomLeaderboard', _ticker, _excountry, _familyid, _fundcat, _brandingnameid);
+                }
+                function InitFooterAd1ForSyncNoPgidForSalreport() {
+                    return WebAdsWriteTagSyncForSalReport('BottomLeaderboard', _ticker, _excountry, _familyid, _fundcat, _brandingnameid);
+                }
+                function InitFooterAd1ForSyncForPortfolio() {
+                    return WebAdsWriteTagSyncForSalReport('BottomLeaderboard', null, null, null, null,null);
+                }
+            </script>
+            <div class="f_leaderad">
+                <div id="BottomADXX" class="LayerFatterDK LayerFatterDKUSAVersion">
+                    <script type="text/javascript">
+                        
+                        InitFooterAd1();
+                        
+                    </script>
+                </div>
+            </div>
+            <script type="text/javascript">
+                var BottomADXX = document.getElementById("BottomADXX");
+                var BottomADXX_t = BottomADXX.innerHTML;
+                if ((BottomADXX_t.indexOf("aimatch.com/default.gif") >= 0) || (BottomADXX_t.indexOf("aimatch.com/empty.gif") >= 0) || (BottomADXX_t.indexOf("morningstar.com/empty.gif") >= 0) || (BottomADXX_t.trim().length < 200)) {
+                    var element = document.getElementById('footer_ads')
+                    element.style.display = "none";
+                }
+                else {
+                    var element = document.getElementById('footer_ads')
+                    element.style.display = "block";
+                    if (document.getElementById('BottomADXX').offsetHeight == 0) {
+                        element.style.height = '94px';
+                    } else {
+                        element.style.height = document.getElementById('BottomADXX').offsetHeight + 'px';
+
+                    }
+
+                }
+            </script>
+            <script type="text/javascript">
+                function InitFooterAd2ForSync(pgId) {
+                    return WebAdsWriteTagSponsorForSync('195', '90', 'BottomButton', pgId);
+                }
+                function InitFooterAd2() {
+                    WebAdsWriteTagSponsor('195', '90', 'BottomButton');
+                }
+                function InitFooterAd2ForSyncNoPgid() {
+                    return WebAdsWriteTagForSyncNoPgid('195', '90', 'BottomButton');
+                }
+                //[EURET-3979]
+                function InitFooterAd2ForSalreport() {
+                    return WebAdsWriteTagForSalReport('BottomButton', _ticker, _excountry, _familyid, _fundcat, _brandingnameid);
+                }
+                function InitFooterAd2ForSyncNoPgidForSalreport() {
+                    return WebAdsWriteTagSyncForSalReport('BottomButton', _ticker, _excountry, _familyid, _fundcat, _brandingnameid);
+                }
+                function InitFooterAd2ForSyncForPortfolio() {
+                    return WebAdsWriteTagSyncForSalReport('BottomButton', null, null, null, null,null);
+                }
+            </script>
+            <div id="f_Ads_BottomRight" class="f_Ads_col1">
+                <script type="text/javascript">
+                        
+                    InitFooterAd2();
+                        
+                </script>
+            </div>
+
+        </div>
+    </div>
+
+
+    
+    <div class="NewFooter_Group">
+        <div class="NewFooter_Group_Line1">
+            <div>
+                <div id="LogoFooter" style="width: 200px">
+                    <a id="morningstarLogoFooter" title="Morningstar" onmouseover="javascript:this.style.cursor=&#39;hand&#39;" onmouseout="javascript:this.style.cursor=&#39;pointer&#39;" href="https://www.morningstar.ca/ca/" style="display: block"><svg xmlns='http://www.w3.org/2000/svg' width='120px' height='100%' version='1.1' x='0' y='0' viewBox='94.5 28 199 45' enable-background='new 94.5 28 199 44' xml:space='preserve'><rect x='195.78' y='30' fill='#f00' width='3.638' height='40'/><polygon fill='#f00' points='245.854,30 257.463,30 257.463,33.331 253.521,33.331 253.521,70 249.86,70 249.86,33.331    245.854,33.331  '/><polygon fill='#f00' points='192.466,30 192.466,70 188.656,70 183.206,45.703 183.206,70 179.632,70 179.632,30 182.92,30    188.892,56.494 188.892,30  '/><polygon fill='#f00' points='113.407,30 113.407,70 109.831,70 109.831,35.713 105.418,70 102.442,70 98.1,35.713 98.1,70    94.5,70 94.5,30 100.589,30 104.076,54.111 107.364,30  '/><path fill='#f00' d='M157.676 69.983c2.83-3.835 4.5-8.576 4.5-13.708 0-12.779-10.357-23.136-23.134-23.136 -12.776 0-23.133 10.359-23.133 23.136 0 5.13 1.67 9.873 4.494 13.708h4.811c-3.492-3.521-5.65-8.359-5.65-13.708 0-10.76 8.723-19.483 19.48-19.483 10.759 0 19.483 8.725 19.483 19.483 0 5.345-2.156 10.189-5.641 13.708H157.676z'/><path fill='#f00' d='M270.631 70h-3.557l-0.941-9.012h-5.323L259.942 70h-3.63l4.104-40h5.548L270.631 70zM265.801 57.377l-2.42-22.057 -2.232 22.057H265.801z'/><path fill='#f00' d='M227.183 64.971c0 1.799-1.061 2.72-2.272 2.72s-2.271-0.921-2.271-2.72V34.783c0-1.801 1.059-2.723 2.271-2.723s2.272 0.923 2.272 2.723l-0.007 1.443v7.535h3.655v-5.808l-0.011-1.679c-0.024-4.98-1.973-7.354-6.037-7.354 -3.621 0-5.976 2.569-5.976 6.509l0.004 1.468v25.016l-0.004 1.62c0 5.122 1.986 7.62 6.061 7.62 4.066 0 5.963-2.455 5.963-7.727V48.887h-6.715v3.5h3.061v11.259L227.183 64.971z'/><path fill='#f00' d='M242.17 64.016V53.619l-8.333-6.22V35.784c0-4.565 2.058-6.9 6.08-6.9 4.086 0 5.94 2.319 5.972 7.449l0.007 1.594v5.892h-3.724v-7.904l-0.011-1.133c0-1.802-1.05-2.723-2.249-2.723 -1.198 0-2.249 0.923-2.249 2.723v1.169 9.713l8.23 6.216v12.018c0 4.702-2.091 7.219-6.003 7.219 -3.957 0-6.019-2.375-6.044-6.959l-0.012-1.583v-7.822h3.823v9.163 1.058c0 1.798 1.053 2.72 2.25 2.72 1.201 0 2.251-0.922 2.251-2.72L242.17 64.016z'/><path fill='#f00' d='M177.433 69.998h-3.649c-0.497-1.346-0.716-2.613-0.741-4.303l-0.027-2.047L173 62.613v-7.811c0-1.637-0.996-2.383-2.149-2.383h-2.596V70h-3.572V30h4.657c5.233 0 7.25 1.913 7.25 7.03v7.508c0 3.368-0.562 4.777-3.199 5.749 0.038 0.014 0.074 0.025 0.108 0.039 2.489 0.723 3.047 1.668 3.076 4.826l0.013 1.447v7.305C176.591 66.566 176.788 68.008 177.433 69.998zM168.254 33.147v15.841h1.284c2.356 0 3.463-1.082 3.463-3.378v-8.151c0-3.286-0.762-4.313-3.193-4.313L168.254 33.147 168.254 33.147zM284.317 69.998h-3.65c-0.497-1.346-0.715-2.613-0.736-4.303l-0.031-2.047 -0.013-1.035v-7.811c0-1.637-0.998-2.383-2.149-2.383h-2.597V70h-3.574V30h4.661c5.232 0 7.245 1.913 7.245 7.03v7.508c0 3.368-0.562 4.777-3.196 5.749 0.037 0.014 0.073 0.025 0.109 0.039 2.488 0.723 3.047 1.668 3.075 4.826l0.012 1.447v7.305C283.475 66.566 283.672 68.008 284.317 69.998zM275.139 33.147v15.841h1.282c2.359 0 3.466-1.082 3.466-3.378v-8.151c0-3.286-0.76-4.313-3.194-4.313L275.139 33.147 275.139 33.147z'/><polygon fill='#f00' points='215.521,30 215.521,70 211.711,70 206.259,45.703 206.259,70 202.686,70 202.686,30 205.972,30    211.946,56.494 211.946,30  '/><path fill='#f00' d='M285.64 33.43c0 1.985 1.611 3.599 3.596 3.599 1.986 0 3.601-1.613 3.601-3.599s-1.615-3.6-3.601-3.6C287.252 29.83 285.64 31.444 285.64 33.43zM286.007 33.43c0-1.781 1.451-3.231 3.229-3.231 1.785 0 3.233 1.451 3.233 3.231 0 1.782-1.448 3.23-3.233 3.23C287.458 36.658 286.007 35.211 286.007 33.43zM287.98 31.673h1.605c0.559 0 1.142 0.215 1.142 1.022 0 0.455-0.205 0.892-0.823 0.994l0.978 1.536h-0.569l-0.959-1.507h-0.906v1.507h-0.467V31.673L287.98 31.673zM288.448 33.309h1.062c0.438 0 0.752-0.141 0.752-0.614 0-0.469-0.312-0.613-0.752-0.613h-1.062V33.309z'/></svg></a>
+                </div>
+                <div id="NewFooterSharedButtonGroup" class="sharedButtonGroupStyle">
+                <div class="sharedButtonItemStyle">
+  <a href="https://www.facebook.com/MorningstarInc" target="_blank">
+    <img src="/static/UploadManager/Image/facebook-03.svg" alt="Facebook" />
+  </a>
+</div>
+<div class="sharedButtonItemStyle">
+  <a href="https://twitter.com/MorningstarCDN " target="_blank">
+    <img src="/static/UploadManager/Image/twitter-01.svg" alt="Twitter" />
+  </a>
+</div>
+<div class="sharedButtonItemStyle">
+  <a href="https://www.linkedin.com/company/10009216/admin/" target="_blank">
+    <img src="/static/UploadManager/Image/linkedin-02.svg" alt="LinkedIn"  />
+  </a>
+</div>
+<div class="sharedButtonItemStyle">
+  <a href="https://www.youtube.com/user/MorningstarCDN" target="_blank">
+    <img src="/static/UploadManager/Image/youtube-06.svg" alt="Youtube"  />
+  </a>
+</div>
+<div class="sharedButtonItemStyle">
+  <a href="https://www.instagram.com/morningstarinc" target="_blank">
+    <img src="/static/UploadManager/Image/instagram-07.svg" alt="Instagram"  />
+  </a>
+</div></div>
+            </div>
+            <div id="NewFooterGroup1" class="NewFooter_Group_Group1">
+            <div class="NewFooter_Group_Div">                      <div>                          <p class="NewFooter_Group_Header">À propos de nous</p>                      </div>                      <div class="mds-list-group">                          <ul class="mds-list-group  mds-list-group--small msmrkt-text--left ">                              <div class="mds-list-group-items">                                  <li class="mds-list-group__item">                                      <a href="https://www.morningstar.com/company/about-us?utm_source=morningstar.ca&utm_medium=referral&utm_content=company/about-us" class="mds-list-group__link" target="_self">                                          <span class="mds-list-group__item-text NewFooter_Group_Text">                                              Notre histoire                                          </span>                                      </a>                                  </li>                                  <li class="mds-list-group__item     ">                                      <a href="https://www.morningstar.com/fr-ca/company" class="mds-list-group__link       " target="_self">                                          <span class="mds-list-group__item-text NewFooter_Group_Text">                                              Site de la société                                          </span>                                      </a>                                  </li>                                  <li class="mds-list-group__item     ">                                      <a href="https://www.morningstar.com/research/signature?utm_source=morningstar.ca&utm_medium=referral&utm_content=research/signature" class="mds-list-group__link       " target="_self">                                          <span class="mds-list-group__item-text NewFooter_Group_Text">                                              Nos méthodologies Signature                                          </span>                                      </a>                                  </li>                                  <li class="mds-list-group__item">                                      <a href="https://www.morningstar.com/careers?utm_source=morningstar.ca&utm_medium=referral&utm_content=careers" class="mds-list-group__link       " target="_self">                                          <span class="mds-list-group__item-text NewFooter_Group_Text">                                              Emplois                                          </span>                                      </a>                                  </li>                              </div>                          </ul>                      </div>                  </div>                  <div class="NewFooter_Group_Div">                      <div>                          <p class="NewFooter_Group_Header">Rester connectés</p>                      </div>                      <div class="mds-list-group">                          <ul class="mds-list-group  mds-list-group--small msmrkt-text--left ">                              <div class="mds-list-group-items">                                  <li class="mds-list-group__item     ">                                      <a href="https://www.morningstar.com/company/global-contacts?utm_source=morningstar.ca&utm_medium=referral&utm_content=company/global-contacts" class="mds-list-group__link       " target="_self">                                          <span class="mds-list-group__item-text  NewFooter_Group_Text">                                              Contacts mondiaux                                          </span>                                      </a>                                  </li>                                  <li class="mds-list-group__item     ">                                      <a href="https://www.morningstar.ca/ca/help/advertising.aspx" class="mds-list-group__link       " target="_blank">                                          <span class="mds-list-group__item-text  NewFooter_Group_Text">                                              Occasions publicitaires                                          </span>                                      </a>                                  </li>                                                                                              </div>                          </ul>                      </div>                  </div>                  <div class="NewFooter_Group_Div">                      <div>                          <p class="NewFooter_Group_Header">Aide</p>                      </div>                      <div class="mds-list-group">                          <ul class="mds-list-group  mds-list-group--small msmrkt-text--left ">                              <div class="mds-list-group-items">                                  <li class="mds-list-group__item">                                      <a href="https://www.morningstar.ca/ca/announcements/website.aspx?lang=fr-CA" class="mds-list-group__link" target="_self">                                          <span class="mds-list-group__item-text  NewFooter_Group_Text">                                              FAQ                                          </span>                                      </a>                                  </li>
+<li class="mds-list-group__item     ">                                      <a href="https://www.morningstar.ca/ca/help/feedbackform.aspx" class="mds-list-group__link       " target="_blank">                                          <span class="mds-list-group__item-text  NewFooter_Group_Text">                                              Questions                                          </span>                                      </a>                                  </li>                              </div>                          </ul>                      </div>                  </div></div>
+        </div>
+        <div id="NewFooterGroup2">
+        <div class="F10 NewFooter_Group_Text">© 2024 Morningstar, Inc. Tous droits réservés.</div>          <p>                      <a href="https://www.morningstar.ca/ca/Disclaimer/Disclaimer.aspx?id=TermsofUse" class="NewFooter_Group_link">Conditions d'utilisation</a>                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                      <a href="https://www.morningstar.ca/ca/Disclaimer/Disclaimer.aspx?id=PrivacyPolicy" class="NewFooter_Group_link">Politique de confidentialité</a>                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.morningstar.com/company/disclosures" class="NewFooter_Group_link" >Divulgations</a >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.morningstar.com/company/accessibility" class="NewFooter_Group_link">Accessibilité</a> </p></div>
+
+    </div>
+
+    <div id="_footer" style="display: none"><div class="f_Links_2"> 
+<div class="f_Links_row2">
+
+<a class="footerlabel" href = "https://www.morningstar.ca/ca/help/feedbackform.aspx">Contacter Morningstar</a> 
+<a class="footerlabel" href = "https://www.morningstar.com/research/signature?utm_source=morningstar.ca&utm_medium=referral&utm_campaign=methodology_link&utm_content=methodology_link_ca-fr">Méthodologie</a> 
+<a class="footerlabel" href = "https://www.morningstar.ca/ca/news/rss.aspx?lang=fr-CA">RSS</a>
+<a class="footerlabel" href = "https://www.morningstar.com/en-ca/company?CON_DOT0003">Site Web de la compagnie</a>
+<a class="footerlabel" href = "https://www.morningstar.com/company/global-contacts">Sites internationaux</a>
+
+<a class="footerlabel" href="javascript:disclaimerOpen('termsofuse')" class="F10">Conditions d'utilisation</a>
+<a class="footerlabel" href="javascript:disclaimerOpen('privacypolicy')" class="F10">Politique de confidentialité</a>
+
+</div> </div></div>
+    <div id="_disclaimerDiv" class="F10 copyrightfooter"><p>La cote Morningstar à base d'étoiles pour les actions est attribuée en fonction de l'estimation de la juste valeur d'une action réalisée par nos analystes. Il s'agit d'une prévision/opinion et non pas d’une affirmation. Morningstar attribue des cotes étoiles en fonction de l'estimation de la juste valeur d'une action réalisée par nos analystes. Quatre composantes conditionnent cette cote à base d’étoiles : (1) notre évaluation de l'avantage concurrentiel de l’entreprise, (2) notre estimation de la juste valeur de l'action, (3) le degré d’incertitude entourant cette estimation de la juste valeur et (4) le cours actuel de l'action sur les marchés. Ce processus aboutit ensuite à l'attribution d'une seule cote, qui est mise à jour quotidiennement. La note maximale de 5 étoiles reflète l'opininon/hypothèse que l'action est actuellement valorisée à sa juste valeur, la note minimale de 1 indiquant l'inverse. Si nos hypothèses de base sont correctes, le prix du marché convergera au fil du temps vers notre estimation de la juste valeur, en règle générale dans les trois ans. Les investissements dans des valeurs mobilières sont soumis aux fluctuations du marché et à d'autres risques. Les performances passées d'un titre peuvent ou non se confirmer et ne préjugent pas des performances futures. Pour de plus amples détails relatifs à la cote Morningstar à base d'étoiles pour les actions, nous vous invitons à <a href='http://global.morningstar.com/equitydisclosures/'>consulter</a></p> <p>L'estimation quantitative de la juste valeur représente l'estimation de Morningstar de la valeur (en dollars) par action des fonds propres d'une entreprise. L'estimation quantitative de la juste valeur se fonde sur un modèle statistique dérivé de l'estimation de la juste valeur que les analystes actions de Morningstar attribuent aux entreprises, accompagnée de prévisions financières. L'estimation quantitative de la juste valeur est calculée quotidiennement. Il s'agit d'une prévision/opinion et non pas d’une affirmation. Les investissements dans des valeurs mobilières sont soumis aux fluctuations du marché et à d'autres risques. Les performances passées d'un titre peuvent ou non se confirmer et ne préjugent pas des performances futures. Pour de plus amples détails relatifs à l'estimation quantitative de la juste valeur, veuillez <a href='http://global.morningstar.com/equitydisclosures/'>consulter</a></P><p>La « Cote de médaillé Morningstar » est l'expression sommaire de l'analyse prospective des stratégies d'investissement de Morningstar telles qu'elles sont proposées par le biais de véhicules spécifiques en utilisant une échelle de cotation « Or », « Argent », « Bronze », « Neutre » et « Négative ». Les cotes indiquent quels placements, selon Morningstar, sont susceptibles de surclasser un indice pertinent ou la moyenne d'un groupe de pairs sur une base ajustée selon le risque au fil du temps. Les produits de placement sont évalués selon trois grands piliers (Personnel, Parente et Processus) qui, lorsqu'ils sont associés à une évaluation des frais, constituent la base de la conviction de Morningstar envers les mérites de placement de ces produits, et déterminent la « Cote de médaillé » qui leur est attribuée. Les cotes de piliers sont exprimées par les mentions « Faible », « Inférieure à la moyenne », « Moyenne », « Supérieure à la moyenne » et « Élevée ». Les piliers peuvent être évalués de façon qualitative par un analyste (soit directement sur un véhicule couvert par l'analyste, soit indirectement lorsque les cotes de pilier d'un véhicule couvert sont appliquées à un véhicule non couvert connexe) ou à l'aide de techniques algorithmiques. Les véhicules sont classés en fonction de leurs performances attendues dans des groupes de cotation définis par leur catégorie Morningstar et leur statut actif ou passif. Lorsque les analystes couvrent directement un véhicule, ils attribuent les cotes des trois piliers en fonction de leur évaluation qualitative, sous la supervision du comité de cotation des analystes, les surveillent et les réévaluent au moins tous les 14 mois. Lorsque les véhicules sont couverts soit indirectement par des analystes, soit par des algorithmes, les cotes sont attribuées mensuellement. Pour des informations plus détaillées sur ces cotes, y compris leur méthodologie, veuillez consulter <a href='http://global.morningstar.com/managerdisclosures./'>ici</a></p> <p>Les Cotes de médaillés Morningstar ne sont pas des énoncés de faits, ni des notes de crédit ou de risque. La « Cote de médaillé Morningstar » (i) ne doit pas être utilisée comme seule base d'évaluation d'un produit d'investissement, (ii) implique des incertitudes et des risques inconnus qui peuvent empêcher la réalisation des attentes ou aboutir à des résultats complètement différents, (iii) n’est pas garantie se fonder sur des hypothèses ou des modèles complets ou exacts lorsqu'ils sont déterminés de manière algorithmique, (iv) comporte le risque que l'objectif de rendement ne soit pas atteint en raison de facteurs tels que des changements imprévus dans les stratégies de gestion, la technologie, le développement économique, l’évolution des taux d'intérêt, les coûts d'exploitation ou de matériel, la pression concurrentielle, la loi applicable en matière de surveillance, le taux de change, le taux d'imposition, les variations des taux de change ou les changements éventuellement intervenus dans les conditions politiques et sociales, et (v) ne doit pas être considérée comme une offre ou une sollicitation d'achat ou de vente du produit de placement. Un changement dans les facteurs fondamentaux sous-jacents à la « Cote de médaillé » peut entraîner que la cote ne sera plus exacte.</P> <p>Si vous souhaitez plus d'informations sur la Cote de médaillé historique de Morningstar pour tous les placements gérés suivis par Morningstar, veuillez contacter votre bureau Morningstar local.</P><p>Pour avoir des informations plus détaillées sur les conflits d'intérêts, y compris les divulgations de l'EU MAR, veuillez consulter le document « Morningstar Medalist Rating Analyst Conflit of Interest & Other Disclosures for EMEA » <a href='https://shareholders.morningstar.com/investor-relations/governance/Compliance--Disclosure/default.aspx'>ici</a></P></div>
+    <div id="footer_ie6fix" />
+
+</div>
+<div id="_italianNetRatings">
+
+</div>
+
+<script type="text/javascript" src="//euim.mstar.com/Modules/AudienceTarget/jquery.audiencetarget.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $.audiencetarget.setCookieDomain('.morningstar.ca');
+        $.audiencetarget.setDefaultCookie();
+    });
+</script>
+
+<script type="text/javascript">
+<!-- Footer disclaimer text behaviour -->
+    $(document).ready(function () {
+        var disclaimerContainer = $('#_disclaimerDiv');
+
+        var paragraphs = disclaimerContainer.children('p');
+
+        if (paragraphs.size() > 0) {
+            var wrapperModel = '<div class="disclaimer-wrapper"></div>';
+            
+            paragraphs.addClass('disclaimer-paragraph').hide();
+
+            var lastParagraphs = disclaimerContainer.children('p:nth-child(n+3)');
+            if (lastParagraphs.size() > 0) {
+                var lastWrapper = $(wrapperModel);
+                lastParagraphs.appendTo(lastWrapper);
+                disclaimerContainer.append(lastWrapper);
+            }
+            
+            disclaimerContainer.children('p').wrap(wrapperModel);
+
+            var disclaimerPrevisualizationModel = '<p class="disclaimer-previsualization"></p>';
+            wrappers = disclaimerContainer.children('.disclaimer-wrapper');
+            wrappers.prepend($(disclaimerPrevisualizationModel));
+
+            var caretDownModel = '<span class="disclaimer-arrow disclaimer-read-more"><svg class="mds-icon mds-button__icon mds-button__icon--right mds-icon--s" ' +
+                'xmlns = "http://www.w3.org/2000/svg" viewBox = "0 0 1500 1500">' +
+                '<path d="M1179.5 310.5l-430 690-430-690-80 60 510 820 510-820z"></path></svg></span>';
+
+            var caretUpModel = '<span class="disclaimer-arrow disclaimer-read-less"><svg class="mds-icon mds-button__icon mds-button__icon--right mds-icon--s" ' +
+                'xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2300 2300">' +
+                '<path d="M1960.5 1810.5l80-60-910-1260-870 1260 80 60 790-1140z"></path></svg></span>';
+
+            wrappers.each(function () {
+                var displayText = $(this).children('p.disclaimer-paragraph:first').text().split(' ').slice(0, 15).join(' ');
+                if (displayText.length > 0) {
+                    $(this).children('p.disclaimer-previsualization').text(displayText).append(caretDownModel);
+                    $(this).children('p.disclaimer-paragraph:last').append(caretUpModel);
+                }
+            });
+        }
+
+        $('span.disclaimer-read-more').on('click', function (event) {
+            event.preventDefault();
+            $(this).parent().hide().siblings().show();
+        });
+
+        $('span.disclaimer-read-less').on('click', function (event) {
+            event.preventDefault();
+            $(this).closest('.disclaimer-wrapper').children('p.disclaimer-paragraph').hide();
+            $(this).closest('.disclaimer-wrapper').children('p.disclaimer-previsualization').show();
+        });        
+    });    
+</script>
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                askAdditionalInfo()
+            })
+        </script>
+
+
+        
+        <div id="additionalInfoe">
+            <div class="body_blocked" style="z-index: 2147483645;"></div>
+            <div id="additionalInfo">
+                <div id="consent_text_div">
+                    <span class="consent_title">
+                        Choisissez votre version du site</span>
+                    <span class="consent_text">
+                        Pour être sûr d’accéder à un contenu pertinent, nous voulons savoir si vous êtes un investisseur particulier ou professionnel. </span>
+                </div>
+                <div id="consent_buttons">
+                    <input type="button" class="btn_consent" value="Je suis un professionnel de la finance" id="btn_professional" />
+                    <input type="button" class="btn_consent" value="Je suis un investisseur particulier" id="btn_individual" />
+                </div>
+            </div>
+        </div>
+
+
+        <!--Mobile Overlay-->
+        
+    </div>
+    <!--mn: 00844-PROD-EU-W -->
+    
+    <script type="text/javascript" src="//euim.mstar.com/Modules/MPUAd/MPUAdHelper.js"></script>
+
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (true) {
+                if ( true ||
+                    document.getElementById('EuSiteAdIdentify')) {
+                }
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        var modalTriggers = document.querySelectorAll('[data-mds-modal-id]')
+
+        for (var i = 0; i < modalTriggers.length; i++) {
+
+            modalTriggers[i].onclick = function () {
+                var modalId = this.getAttribute('data-mds-modal-id')
+                MDS.modal(modalId)
+            }
+        };
+    </script>
+
+    <script type="text/javascript">
+        var ReloadAdvertisement = function () {
+            
+            $.getScript("//euim.mstar.com/scripts/ads.js").done(function (script, textStatus) {
+                if (document.getElementById('EuSiteAdIdentify')) {
+                    window.location.reload()
+                }
+                else {
+                    $('#disableDescription').css('display', 'block')
+                    $('#disableDescription .mds-overlay').css('opacity', '0.7')
+                }
+            }).fail(function (jqxhr, settings, exception) {
+                if (document.getElementById('EuSiteAdIdentify')) {
+                    window.location.Reload()
+                }
+                else {
+                    $('#disableDescription').css('display', 'block')
+                    $('#disableDescription .mds-overlay').css('opacity', '0.7')
+                }
+            })
+        };
+    </script>
+    <div id="adBlockPopupWindow" class='mds-dialog-wrapper' style='display: none'>
+        <div class='mds-overlay'></div>
+        <div role='dialog' class='mds-dialog mds-dialog--active'>
+            <div id='mds-dialog-message' class='mds-dialog__message' tabindex='10' style="font-size: 11px; font-family: Verdana, Arial, Helvetica, sans-serif;">
+                Ads help us provide you with high quality content at no cost to you. <br> <br> Please continue to support Morningstar by adding us to your whitelist or disabling your ad blocker while visiting oursite.
+            </div>
+            <div class='mds-dialog__action-buttons'>
+                <div class='mds-dialog__cancel-resolve-buttons-holder'>
+                    <button class='mds-button mds-dialog__cancel-button' type='button' onclick="window.location.href='/ca/AdBlockReject.aspx'" role='button' style="font-size: 13px; padding: 8px 8px;">No Thanks</button>
+                    <button class='mds-button mds-button--primary mds-dialog__resolve-button' type='button' style="font-size: 13px; padding: 8px 8px;" onclick='ReloadAdvertisement()'>I've disabled it</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id='disableDescription' style="display: none" class='mds-dialog-wrapper'>
+        <div role='dialog' class='mds-dialog mds-dialog--active'>
+            <div id='mds-dialog-message' class='mds-dialog__message' tabindex='10' style="font-size: 11px; font-family: Verdana, Arial, Helvetica, sans-serif;">
+                Ad blocker detected.<br><br>Unfortunately, we detect that your ad blocker is still running.To access our site, simply turn off your ad blocker and press ‘I've disabled it’ to continue.<br><br>
+                <div class='mds-dialog__action-buttons'>
+                    <div class='mds-dialog__cancel-resolve-buttons-holder' style="margin: auto;">
+                        <button id="descriptionbtn" class='mds-button mds-button--primary mds-dialog__resolve-button' type='button' style="font-size: 13px; padding: 8px 8px; width: 100px">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        (function () {
+            function async_load() {
+                var s = document.createElement('script')
+                if ( typeof OnetrustActiveGroups == 'undefined' || (typeof OnetrustActiveGroups != 'undefined' && !OnetrustActiveGroups.includes("C0004"))) {
+                    s.type = "text/plain"
+                }
+                else {
+                    s.type = 'text/javascript'
+                }
+                s.async = true
+                s.src = '//img.en25.com/i/elqCfg.min.js'
+                s.onload = function () {
+                    window._elqQ.push(['elqSetSiteId', '1258972516'])
+                    window._elqQ.push(['elqUseFirstPartyCookie', 'elqtrk.morningstar.ca'])
+                    window._elqQ.push(['elqTrackPageView', window.location.href])
+                    window._elqQ.push(['elqGetCustomerGUID'])
+                }
+
+                var x = document.getElementsByTagName('script')[0]
+                x.parentNode.insertBefore(s, x)
+            }
+            async_load()
+        })();
+    </script>
+</body>
+</html>
